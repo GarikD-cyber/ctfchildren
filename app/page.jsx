@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 
 const SAVE_PREFIX = "cybercity:v1:";
@@ -244,7 +242,6 @@ function saveProfile(profile) {
 }
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
   const [screen, setScreen] = useState("landing");
   const [nameInput, setNameInput] = useState("");
   const [nameError, setNameError] = useState("");
@@ -257,7 +254,6 @@ export default function Home() {
 
   useEffect(() => {
     setSettings(loadSettings());
-    setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -315,10 +311,6 @@ export default function Home() {
   function toggleSetting(key) {
     setSettings((s) => ({ ...s, [key]: !s[key] }));
     if (profile) updateProfile((p) => ({ ...p, [key]: !settings[key] }));
-  }
-
-  if (!mounted) {
-    return <main className="app-shell" aria-busy="true" aria-label="Кибергород загружается" />;
   }
 
   return (
