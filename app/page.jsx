@@ -161,6 +161,62 @@ const MISSIONS = [
     flag: "FLAG-ПОДДЕРЖКА-08",
     success: "Ты остановил распространение обидных сообщений и помог герою получить поддержку. Просить помощи — правильно и смело.",
   },
+  {
+    id: 9,
+    title: "Замок с двумя ключами",
+    district: "Район разумной защиты",
+    icon: "🗝️",
+    color: "violet",
+    villain: "Одноключник",
+    story: "Злодей узнал пароль от главных ворот. Установи второй независимый способ проверки и не дай ему войти.",
+    lesson: "Пароль — один способ доказать, что аккаунт твой. Факторы бывают трёх видов: то, что ты знаешь — пароль или секретная фраза; то, что у тебя есть — телефон, приложение с кодом или ключ безопасности; то, чем ты являешься — лицо или отпечаток. Два пароля относятся к одной категории и не становятся двумя факторами. Одноразовый код нельзя сообщать никому: настоящая поддержка не просит его в сообщении.",
+    rule: "Для надёжной защиты выбирай два разных фактора и никому не сообщай одноразовый код.",
+    check: { question: "Пароль и ещё один пароль — это двухфакторная защита?", options: ["Да, потому что паролей два", "Нет, оба относятся к тому, что человек знает", "Да, если второй пароль длиннее", "Зависит от цвета пароля"], correct: 1 },
+    flag: "FLAG-ДВА-КЛЮЧА-09",
+    success: "Теперь одного украденного пароля недостаточно. Ты добавил второй независимый способ проверки.",
+  },
+  {
+    id: 10,
+    title: "Что нельзя рассказывать ИИ",
+    district: "Район разумной защиты",
+    icon: "🚦",
+    color: "cyan",
+    villain: "Болтливый Бот",
+    story: "Жители отправляют ИИ-помощнику слишком много сведений о себе и других людях. Очисти запросы до отправки.",
+    lesson: "ИИ можно задавать вопросы, но нельзя отправлять ему всё подряд. Зелёные запросы не содержат личных данных. Из жёлтых сначала нужно удалить имя, школу, адрес, чужую фотографию или переписку и при необходимости спросить взрослого. Красные данные — настоящий пароль, код подтверждения, документ и банковские сведения — отправлять нельзя. Чужую фотографию или переписку нельзя загружать без разрешения.",
+    rule: "Перед отправкой в ИИ остановись и проверь: есть ли здесь мои или чужие личные данные?",
+    check: { question: "В школьном тексте указаны твои фамилия, школа и домашний адрес. Что сделать перед отправкой в ИИ?", options: ["Отправить как есть", "Удалить личные данные и только потом отправить текст", "Добавить номер телефона", "Опубликовать текст"], correct: 1 },
+    flag: "FLAG-ДАННЫЕ-ИИ-10",
+    success: "Ты научился использовать ИИ без лишних личных данных. Хороший запрос может быть полезным и безопасным одновременно.",
+  },
+  {
+    id: 11,
+    title: "Спаси цифровой архив",
+    district: "Район разумной защиты",
+    icon: "🗄️",
+    color: "orange",
+    villain: "Цифровая Буря",
+    story: "На Кибергород надвигается цифровая буря. Создай дополнительные копии важных файлов до поломки компьютера.",
+    lesson: "Резервная копия — дополнительная копия важного файла в другом безопасном месте. Две папки на одном телефоне не помогут, если потеряется сам телефон. Важные файлы лучше хранить минимум в двух местах и иногда проверять копии. Семейным облаком и внешним носителем пользуйся с разрешения взрослого. Неизвестную флешку подключать нельзя.",
+    rule: "Важный файл не должен существовать только в одном месте.",
+    check: { question: "Фотография хранится в двух папках одного телефона. Это надёжная резервная копия?", options: ["Да, папок две", "Нет: при поломке или потере телефона могут исчезнуть обе папки", "Да, если папки разных цветов", "Копии не нужны"], correct: 1 },
+    flag: "FLAG-КОПИЯ-11",
+    success: "Цифровая буря прошла, а важные файлы сохранились. Ты заранее создал копии в разных местах.",
+  },
+  {
+    id: 12,
+    title: "Следы в цифровом парке",
+    district: "Район разумной защиты",
+    icon: "👣",
+    color: "pink",
+    villain: "Эхо-Пересылатель",
+    story: "В цифровом парке остаются следы сообщений, фотографий и комментариев. Проследи, куда путешествует информация.",
+    lesson: "Цифровой след — информация, которая остаётся после действий в интернете. Даже удалённую публикацию могли переслать или сохранить скриншотом. Личное сообщение тоже могут переслать, а приватность лишь уменьшает круг зрителей. Чужие фотографии публикуют только с разрешения. Добрые и полезные действия тоже создают цифровой след.",
+    rule: "Перед публикацией подумай: буду ли я спокойно относиться к этому сообщению завтра и через год?",
+    check: { question: "Ты удалил фотографию через пять минут. Может ли она всё ещё остаться у других людей?", options: ["Нет, удаление стирает все копии", "Да, её могли переслать или сохранить скриншотом", "Только через год", "Зависит от цвета фотографии"], correct: 1 },
+    flag: "FLAG-СЛЕД-12",
+    success: "Ты увидел, как быстро информация может путешествовать по сети. Теперь ты умеешь думать перед публикацией и создавать добрый цифровой след.",
+  },
 ];
 
 const PROFILE_CARDS = [
@@ -354,6 +410,57 @@ const BULLY_SCENES = [
   { type: "Просьба распространить вред", from: "Эхо-Задира", text: "Перешли всем эту унизительную картинку — будет смешно!", safe: ["evidence", "report", "adult", "support"] },
 ];
 
+const MFA_CARDS = [
+  ["password", "Пароль", "know", "🔤"], ["phrase", "Секретная фраза", "know", "💭"],
+  ["app", "Код из приложения", "have", "📲"], ["phone", "Телефон", "have", "📱"],
+  ["key", "Ключ безопасности", "have", "🔑"], ["finger", "Отпечаток пальца", "are", "☝️"],
+  ["face", "Лицо", "are", "🙂"], ["username", "Имя пользователя", "none", "🏷️"],
+  ["color", "Любимый цвет", "none", "🎨"], ["twopass", "Два одинаковых пароля", "none", "2️⃣"],
+].map(([id, label, group, icon]) => ({ id, label, group, icon }));
+
+const MFA_FACTORS = [
+  ["password", "Пароль", "know"], ["second", "Второй пароль", "know"], ["question", "Контрольный вопрос", "know"],
+  ["app", "Код из приложения", "have"], ["app2", "Ещё один код из того же приложения", "have"],
+  ["key", "Физический ключ", "have"], ["finger", "Отпечаток", "are"], ["face", "Лицо", "are"], ["username", "Имя пользователя", "none"],
+].map(([id, label, group]) => ({ id, label, group }));
+
+const AI_TRAFFIC_CARDS = [
+  ["Придумай название команды", "green"], ["Объясни, почему идёт дождь", "green"], ["Помоги составить план рассказа", "green"], ["Придумай загадку про робота", "green"],
+  ["Проверь текст с полным именем", "yellow"], ["Письмо с номером школы", "yellow"], ["Обработай фотографию ребёнка", "yellow"], ["Перескажи личную переписку друга", "yellow"], ["Документ с адресом", "yellow"],
+  ["Настоящий пароль", "red"], ["Одноразовый код", "red"], ["Фотография паспорта", "red"], ["Банковские данные", "red"], ["Имя вместе с точным адресом", "red"], ["Чужой семейный секрет", "red"],
+].map(([text, level], id) => ({ id, text, level }));
+
+const AI_CLEAN_REQUESTS = [
+  { parts: [["Меня зовут Алексей Петров. ", true], ["Я живу на улице Лесной, 15. ", true], ["Помоги написать рассказ о космосе.", false]] },
+  { parts: [["Мой телефон +7 000 123-45-67. ", true], ["Придумай название команды.", false]] },
+  { parts: [["Я учусь в школе №77, 5Б класс. ", true], ["Объясни задачу про дроби.", false]] },
+  { parts: [["Мой пароль Robot!2026. ", true], ["Расскажи, как придумывают надёжные учебные парольные фразы.", false]] },
+  { parts: [["Друг написал мне: «Я боюсь идти домой». ", true], ["Как поддержать человека добрыми словами?", false]] },
+  { parts: [["Прикрепляю фотографию документа и сообщаю, что семья уехала до воскресенья. ", true], ["Составь список дел на выходные.", false]] },
+];
+
+const ARCHIVE_FILES = [
+  ["Семейные фотографии", "backup", "📷"], ["Школьный проект", "backup", "📚"], ["Рисунок", "backup", "🎨"],
+  ["Сохранение игры", "adult", "🎮"], ["Временный файл", "again", "🧹"], ["Повторно скачиваемая музыка", "again", "🎵"],
+  ["Важный документ", "adult", "📄"], ["Установочный файл программы", "again", "💿"], ["Учебное расписание", "backup", "📅"],
+].map(([label, group, icon], id) => ({ id, label, group, icon }));
+
+const BACKUP_TARGETS = [
+  ["external", "Внешний носитель взрослого", true], ["cloud", "Семейное облако", true], ["folder", "Вторая папка на том же устройстве", false],
+  ["unknown", "Найденная неизвестная флешка", false], ["chat", "Сообщение себе в открытом чате", false],
+];
+
+const DIGITAL_SCENARIOS = [
+  { title: "Фото друга без разрешения", icon: "🧑‍🤝‍🧑", answer: "spread", path: "Друг увидел → переслал → появился скриншот" },
+  { title: "Добрый комментарий", icon: "💚", answer: "positive", path: "Одноклассник увидел → получил поддержку" },
+  { title: "Домашний адрес", icon: "🏠", answer: "spread", path: "Публикацию увидели → копия попала незнакомцу" },
+  { title: "Результат школьного проекта", icon: "🏆", answer: "limited", path: "Учитель разрешил → увидел только класс" },
+  { title: "Обидная шутка", icon: "😞", answer: "spread", path: "Сообщение переслали → вред усилился" },
+  { title: "Неотправленный черновик", icon: "📝", answer: "draft", path: "Черновик не отправлен → никто не увидел" },
+];
+
+const TRACE_ORDER = ["Неотправленный черновик", "Устный разговор", "Личное сообщение", "Комментарий", "Публичная публикация", "Пересланная фотография", "Скриншот"];
+
 function normalizeName(value) {
   return value.trim().replace(/\s+/g, " ").toLocaleLowerCase("ru-RU");
 }
@@ -373,7 +480,7 @@ function validName(value) {
 
 function newProfile(name, settings) {
   return {
-    version: 2,
+    version: 3,
     name: name.trim().replace(/\s+/g, " "),
     currentMission: 1,
     completed: [],
@@ -390,23 +497,23 @@ function newProfile(name, settings) {
 function migrateProfile(saved, fallbackName, settings) {
   if (!saved || typeof saved !== "object") return newProfile(fallbackName, settings);
   const completed = Array.from(new Set((Array.isArray(saved.completed) ? saved.completed : [])
-    .map(Number).filter((id) => id >= 1 && id <= 8))).sort((a, b) => a - b);
+    .map(Number).filter((id) => id >= 1 && id <= 12))).sort((a, b) => a - b);
   const contiguous = completed.reduce((last, id) => id === last + 1 ? id : last, 0);
-  const nextMission = Math.min(contiguous + 1, 8);
+  const nextMission = Math.min(contiguous + 1, 12);
   const available = Array.from(new Set([
     1,
-    ...(Array.isArray(saved.available) ? saved.available : []).map(Number).filter((id) => id >= 1 && id <= 8),
+    ...(Array.isArray(saved.available) ? saved.available : []).map(Number).filter((id) => id >= 1 && id <= 12),
     ...completed,
-    ...(contiguous < 8 ? [nextMission] : []),
+    ...(contiguous < 12 ? [nextMission] : []),
   ])).sort((a, b) => a - b);
   const flags = { ...(saved.flags && typeof saved.flags === "object" ? saved.flags : {}) };
   completed.forEach((id) => { if (!flags[id] && MISSIONS[id - 1]) flags[id] = MISSIONS[id - 1].flag; });
   return {
     ...newProfile(saved.name || fallbackName, settings),
     ...saved,
-    version: 2,
+    version: 3,
     name: String(saved.name || fallbackName).trim().replace(/\s+/g, " "),
-    currentMission: Math.min(Math.max(Number(saved.currentMission) || 1, 1), 8),
+    currentMission: Math.min(Math.max(Number(saved.currentMission) || 1, 1), 12),
     completed,
     available,
     flags,
@@ -518,7 +625,7 @@ export default function Home() {
   }
 
   function openMission(id) {
-    if (id > 8 || !profile.available.includes(id)) return;
+    if (id > 12 || !profile.available.includes(id)) return;
     updateProfile((p) => ({ ...p, currentMission: id }));
     setMissionId(id);
     setMissionStage(0);
@@ -612,8 +719,9 @@ export default function Home() {
             updateProfile={updateProfile}
             onMap={() => setScreen("map")}
             onNext={() => {
-              if (missionId < 8) openMission(missionId + 1);
-              else setScreen("district2");
+              if (missionId === 8) setScreen("district2");
+              else if (missionId === 12) setScreen("district3");
+              else openMission(missionId + 1);
             }}
             notify={setToast}
           />
@@ -621,8 +729,11 @@ export default function Home() {
         {screen === "district2" && profile && (
           <DistrictTwoComplete profile={profile} onMap={() => setScreen("map")} onRepeat={openMission} />
         )}
+        {screen === "district3" && profile && (
+          <DistrictThreeComplete profile={profile} onMap={() => setScreen("map")} onRepeat={openMission} />
+        )}
       </div>
-      <footer><span>🛡️ Данные остаются на этом устройстве</span><span>Расширенный прототип · 8 из 24 миссий</span></footer>
+      <footer><span>🛡️ Данные остаются на этом устройстве</span><span>Расширенный прототип · 12 из 24 миссий</span></footer>
       {toast && <div className="toast" role="status">{toast}</div>}
     </main>
   );
@@ -775,6 +886,7 @@ function CityMap({ profile, onOpen, onHome }) {
   const completed = profile.completed.length;
   const firstProtected = [1, 2, 3, 4].every((id) => profile.completed.includes(id));
   const secondProtected = [5, 6, 7, 8].every((id) => profile.completed.includes(id));
+  const thirdProtected = [9, 10, 11, 12].every((id) => profile.completed.includes(id));
   return (
     <section className="map-screen">
       <div className="map-heading">
@@ -792,8 +904,10 @@ function CityMap({ profile, onOpen, onHome }) {
       <MissionDistrict missions={MISSIONS.slice(0, 4)} profile={profile} onOpen={onOpen} restored={firstProtected} />
       <div className={`district-label district-two-label ${secondProtected ? "protected" : ""}`}><span>Район 02</span><b>Квартал цифровой устойчивости</b><small>{secondProtected ? "✓ Защищён и восстановлен" : "4 игровые миссии"}</small></div>
       <MissionDistrict missions={MISSIONS.slice(4, 8)} profile={profile} onOpen={onOpen} restored={secondProtected} />
+      <div className={`district-label district-two-label ${thirdProtected ? "protected" : ""}`}><span>Район 03</span><b>Квартал разумной защиты</b><small>{thirdProtected ? "✓ Защищён и восстановлен" : "4 игровые миссии"}</small></div>
+      <MissionDistrict missions={MISSIONS.slice(8, 12)} profile={profile} onOpen={onOpen} restored={thirdProtected} />
       <div className="future-districts">
-        {[3, 4, 5, 6].map((district) => (
+        {[4, 5, 6].map((district) => (
           <div className="future-district" key={district}>
             <div className="future-title"><span>🔒</span><b>Район {String(district).padStart(2, "0")}</b><small>Скоро откроется</small></div>
             <div className="future-nodes">
@@ -854,13 +968,13 @@ function Mission({ mission, stage, setStage, profile, updateProfile, onMap, onNe
   function completeMission() {
     updateProfile((p) => {
       const completedIds = Array.from(new Set([...p.completed, mission.id])).sort((a, b) => a - b);
-      const nextAvailable = mission.id < 8 ? [...p.available, mission.id + 1] : p.available;
+      const nextAvailable = mission.id < 12 ? [...p.available, mission.id + 1] : p.available;
       return {
         ...p,
         completed: completedIds,
         available: Array.from(new Set(nextAvailable)).sort((a, b) => a - b),
         flags: { ...p.flags, [mission.id]: mission.flag },
-        currentMission: Math.min(mission.id + 1, 8),
+        currentMission: Math.min(mission.id + 1, 12),
       };
     });
     setStage(4);
@@ -921,6 +1035,10 @@ function Mission({ mission, stage, setStage, profile, updateProfile, onMap, onNe
       {stage === 3 && mission.id === 6 && <ImageDetectiveGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 3 && mission.id === 7 && <ShieldRepairGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 3 && mission.id === 8 && <KindReplyGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 9 && <TwoKeyWorkshop profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 10 && <AiPrivacyEditor profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 11 && <ArchiveRescueGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 12 && <DigitalTraceGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 4 && (
         <Reward mission={mission} name={profile.name} completed={completed} onMap={onMap} onNext={onNext} notify={notify} />
       )}
@@ -1253,6 +1371,170 @@ function KindReplyGame({ profile, updateProfile, onSuccess, onLesson }) {
   );
 }
 
+function TwoKeyWorkshop({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase, setPhase] = useState("sort");
+  const [index, setIndex] = useState(0);
+  const [selected, setSelected] = useState([]);
+  const [protectedCount, setProtectedCount] = useState(0);
+  const [showError, setShowError] = useState(false);
+  const card = MFA_CARDS[index];
+
+  function fail() { recordMistake(profile, updateProfile, 9); setShowError(true); }
+  function classify(group) {
+    if (group !== card.group) { fail(); return; }
+    if (index === MFA_CARDS.length - 1) { setPhase("accounts"); setIndex(0); }
+    else setIndex((value) => value + 1);
+  }
+  function toggle(id) { setSelected((current) => current.includes(id) ? current.filter((item) => item !== id) : current.length < 2 ? [...current, id] : current); }
+  function secure() {
+    const factors = selected.map((id) => MFA_FACTORS.find((factor) => factor.id === id));
+    const valid = factors.length === 2 && factors.some((factor) => factor.group === "know") && factors.some((factor) => factor.group === "have" || factor.group === "are");
+    if (!valid) { fail(); return; }
+    if (protectedCount === 5) { onSuccess(); return; }
+    setProtectedCount((value) => value + 1); setSelected([]);
+  }
+  function retry() { setPhase("sort"); setIndex(0); setSelected([]); setProtectedCount(0); setShowError(false); }
+  if (showError) return <GameError showHint={(profile.attempts[9] || 0) >= 2} hint="Посмотри на категории: пароль и контрольный вопрос — оба «знаю». Для второго фактора нужен предмет или биометрический признак." onRetry={() => { retry(); onLesson(); }} onLesson={onLesson} />;
+
+  return (
+    <div className="mission-card game-card mfa-game">
+      <div className="game-counter"><span>{phase === "sort" ? "Этап 1 · Разбери факторы" : "Этап 2 · Закрой ворота"}</span><b>{phase === "sort" ? `${index + 1} из ${MFA_CARDS.length}` : `Защищено аккаунтов: ${protectedCount} из 6`}</b></div>
+      {phase === "sort" ? <>
+        <h1>К какой категории относится карточка?</h1>
+        <div className="factor-card"><span>{card.icon}</span><b>{card.label}</b></div>
+        <div className="factor-zones">{[["know","Знаю","💭"],["have","Имею","📱"],["are","Являюсь","☝️"],["none","Не является фактором","⛔"]].map(([id,label,icon]) => <button key={id} onClick={() => classify(id)}><span>{icon}</span><b>{label}</b></button>)}</div>
+      </> : <>
+        <h1>Защити аккаунт жителя {protectedCount + 1}</h1>
+        <p>Выбери ровно два независимых способа: один из категории «знаю» и второй из другой категории.</p>
+        <div className="account-gate"><i style={{width:`${(protectedCount / 6) * 100}%`}} /><span>🏰</span></div>
+        <div className="factor-options">{MFA_FACTORS.map((factor) => <button key={factor.id} onClick={() => toggle(factor.id)} className={selected.includes(factor.id) ? "selected" : ""}>{selected.includes(factor.id) ? "✓ " : ""}{factor.label}<small>{(profile.attempts[9] || 0) >= 2 ? ({know:"ЗНАЮ",have:"ИМЕЮ",are:"ЯВЛЯЮСЬ",none:"НЕ ФАКТОР"}[factor.group]) : ""}</small></button>)}</div>
+        <button className="button primary" disabled={selected.length !== 2} onClick={secure}>Установить два ключа</button>
+      </>}
+      <p className="safe-reminder">🔐 Здесь нет настоящих паролей, телефонов или биометрических данных.</p>
+    </div>
+  );
+}
+
+function AiPrivacyEditor({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase, setPhase] = useState("traffic");
+  const [index, setIndex] = useState(0);
+  const [removed, setRemoved] = useState([]);
+  const [showError, setShowError] = useState(false);
+  const card = AI_TRAFFIC_CARDS[index];
+  const request = AI_CLEAN_REQUESTS[index];
+
+  function fail() { recordMistake(profile, updateProfile, 10); setShowError(true); }
+  function sort(level) {
+    if (level !== card.level) { fail(); return; }
+    if (index === AI_TRAFFIC_CARDS.length - 1) { setPhase("clean"); setIndex(0); }
+    else setIndex((value) => value + 1);
+  }
+  function togglePart(partIndex) { setRemoved((current) => current.includes(partIndex) ? current.filter((id) => id !== partIndex) : [...current, partIndex]); }
+  function clean() {
+    const correct = request.parts.every((part, partIndex) => part[1] === removed.includes(partIndex));
+    if (!correct) { fail(); return; }
+    if (index === AI_CLEAN_REQUESTS.length - 1) { onSuccess(); return; }
+    setIndex((value) => value + 1); setRemoved([]);
+  }
+  function retry() { setPhase("traffic"); setIndex(0); setRemoved([]); setShowError(false); }
+  if (showError) return <GameError showHint={(profile.attempts[10] || 0) >= 2} hint="Опасная категория — сведения, по которым можно узнать человека, войти в его аккаунт или прочитать чужую личную информацию." onRetry={() => { retry(); onLesson(); }} onLesson={onLesson} />;
+
+  return (
+    <div className="mission-card game-card ai-editor-game">
+      <div className="game-counter"><span>{phase === "traffic" ? "Часть 1 · Светофор запросов" : "Часть 2 · Очисти запрос"}</span><b>{index + 1} из {phase === "traffic" ? AI_TRAFFIC_CARDS.length : AI_CLEAN_REQUESTS.length}</b></div>
+      {phase === "traffic" ? <>
+        <h1>Можно ли отправить это ИИ?</h1><div className="prompt-ticket">{card.text}</div>
+        <div className="traffic-actions"><button className="green" onClick={() => sort("green")}>🟢 Можно отправить</button><button className="yellow" onClick={() => sort("yellow")}>🟡 Сначала очистить</button><button className="red" onClick={() => sort("red")}>🔴 Нельзя отправлять</button></div>
+      </> : <>
+        <h1>Нажми на опасные фрагменты</h1><p>Удали личные сведения, сохранив полезную просьбу.</p>
+        <div className="editable-prompt">{request.parts.map(([text], partIndex) => <button key={partIndex} onClick={() => togglePart(partIndex)} className={removed.includes(partIndex) ? "removed" : ""}>{removed.includes(partIndex) ? <del>{text}</del> : text}</button>)}</div>
+        <div className="safe-preview"><small>БЕЗОПАСНАЯ ВЕРСИЯ</small><p>{request.parts.filter((_, partIndex) => !removed.includes(partIndex)).map(([text]) => text).join("") || "Сначала оставь полезную часть запроса."}</p></div>
+        <button className="button primary" onClick={clean}>Проверить и отправить безопасно</button>
+      </>}
+    </div>
+  );
+}
+
+function ArchiveRescueGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase, setPhase] = useState("importance");
+  const [index, setIndex] = useState(0);
+  const [saved, setSaved] = useState(0);
+  const [storm, setStorm] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const file = ARCHIVE_FILES[index];
+  const rescueFiles = ["Семейные фотографии", "Школьный проект", "Рисунок", "Сохранение игры", "Важный документ", "Учебное расписание"];
+
+  function fail() { recordMistake(profile, updateProfile, 11); setShowError(true); }
+  function classify(group) {
+    if (group !== file.group) { fail(); return; }
+    if (index === ARCHIVE_FILES.length - 1) { setPhase("copies"); setIndex(0); }
+    else setIndex((value) => value + 1);
+  }
+  function backup(targetId) {
+    const target = BACKUP_TARGETS.find(([id]) => id === targetId);
+    if (!target[2]) { fail(); return; }
+    if (index === rescueFiles.length - 1) { setSaved(6); setPhase("storm"); setIndex(0); }
+    else { setSaved((value) => value + 1); setIndex((value) => value + 1); }
+  }
+  function retry() { setPhase("importance"); setIndex(0); setSaved(0); setStorm(false); setShowError(false); }
+  if (showError) return <GameError showHint={(profile.attempts[11] || 0) >= 2} hint="Две папки на одном устройстве пропадут вместе с ним. Безопасная дополнительная копия находится на отдельном носителе взрослого или в семейном облаке." onRetry={() => { retry(); onLesson(); }} onLesson={onLesson} />;
+
+  return (
+    <div className="mission-card game-card archive-game">
+      <div className="game-counter"><span>{phase === "importance" ? "Этап 1 · Важность" : phase === "copies" ? "Этап 2 · Безопасные копии" : "Этап 3 · Цифровая буря"}</span><b>Сохранено файлов: {saved} из 6</b></div>
+      {phase === "importance" && <><h1>Что делать с этим файлом?</h1><div className="archive-file"><span>{file.icon}</span><b>{file.label}</b></div><div className="archive-categories"><button onClick={() => classify("backup")}>🛟 Нужна резервная копия</button><button onClick={() => classify("again")}>↻ Можно скачать или создать снова</button><button onClick={() => classify("adult")}>🧑 Сначала спросить взрослого</button></div></>}
+      {phase === "copies" && <><h1>Создай копию: {rescueFiles[index]}</h1><p>Основная копия уже на компьютере. Выбери ещё одно безопасное место.</p><div className="backup-map"><div className="device main-device">💻<b>Основной компьютер</b></div><div className="backup-arrow">＋</div><div className="target-list">{BACKUP_TARGETS.map(([id,label]) => <button key={id} onClick={() => backup(id)}>{label}</button>)}</div></div></>}
+      {phase === "storm" && <div className={`storm-simulation ${storm ? "active" : ""}`}><h1>{storm ? "Файлы восстановлены!" : "Запустить безопасную симуляцию бури?"}</h1><div className="storm-city"><span>💻</span><i>⚡</i><span>☁️</span><b>{storm ? "✓ 6 файлов восстановлено из копий" : "Основной компьютер может сломаться"}</b></div>{storm ? <button className="button primary" onClick={onSuccess}>Завершить спасение архива</button> : <button className="button primary" onClick={() => setStorm(true)}>Запустить цифровую бурю</button>}</div>}
+    </div>
+  );
+}
+
+function DigitalTraceGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase, setPhase] = useState("paths");
+  const [index, setIndex] = useState(0);
+  const [path, setPath] = useState("");
+  const [timeline, setTimeline] = useState([]);
+  const [showError, setShowError] = useState(false);
+  const scene = DIGITAL_SCENARIOS[index];
+  const draftSteps = [
+    { title: "Личные данные", options: ["Оставить адрес", "Удалить личные данные"], correct: 1 },
+    { title: "Фото друга", options: ["Спросить разрешение", "Публиковать без спроса"], correct: 0 },
+    { title: "Аудитория", options: ["Все пользователи", "Только подходящая группа"], correct: 1 },
+    { title: "Тон", options: ["Проверить, что текст добрый", "Добавить обидную шутку"], correct: 0 },
+  ];
+  function fail() { recordMistake(profile, updateProfile, 12); setShowError(true); }
+  function choosePath(answer) {
+    if (answer !== scene.answer) { fail(); return; }
+    setPath(scene.path);
+  }
+  function nextPath() {
+    if (index === DIGITAL_SCENARIOS.length - 1) { setPhase("draft"); setIndex(0); setPath(""); }
+    else { setIndex((value) => value + 1); setPath(""); }
+  }
+  function draft(answerIndex) {
+    if (answerIndex !== draftSteps[index].correct) { fail(); return; }
+    if (index === draftSteps.length - 1) { setPhase("time"); setIndex(0); }
+    else setIndex((value) => value + 1);
+  }
+  function addTime(item) {
+    const expected = TRACE_ORDER[timeline.length];
+    if (item !== expected) { fail(); return; }
+    const next = [...timeline, item]; setTimeline(next);
+    if (next.length === TRACE_ORDER.length) onSuccess();
+  }
+  function retry() { setPhase("paths"); setIndex(0); setPath(""); setTimeline([]); setShowError(false); }
+  if (showError) return <GameError showHint={(profile.attempts[12] || 0) >= 2} hint="Проследи линии: отправленное сообщение могут переслать или сохранить. Неотправленный черновик не покидает устройство, а срок жизни копии заранее неизвестен." onRetry={() => { retry(); onLesson(); }} onLesson={onLesson} />;
+
+  return (
+    <div className="mission-card game-card trace-game">
+      <div className="game-counter"><span>{phase === "paths" ? "Часть 1 · Куда ушла публикация" : phase === "draft" ? "Часть 2 · Безопасная публикация" : "Часть 3 · Шкала времени"}</span><b>{phase === "paths" ? `${index + 1} из ${DIGITAL_SCENARIOS.length}` : "Цифровой парк"}</b></div>
+      {phase === "paths" && <><h1>{scene.title}</h1><div className="trace-map"><div className="post-origin"><span>{scene.icon}</span><b>Начальная публикация</b></div><div className={`trace-lines ${path ? "visible" : ""}`}><i/><i/><i/></div><div className="trace-result">{path || "Выбери наиболее вероятный маршрут"}</div></div>{!path ? <div className="trace-actions"><button onClick={() => choosePath("spread")}>Могли переслать и сохранить</button><button onClick={() => choosePath("positive")}>Создал добрый след</button><button onClick={() => choosePath("limited")}>Разрешено для ограниченной группы</button><button onClick={() => choosePath("draft")}>Никто не увидел: это черновик</button></div> : <button className="button primary" onClick={nextPath}>Следующий след →</button>}</>}
+      {phase === "draft" && <><h1>Собери безопасную публикацию</h1><div className="draft-card"><small>ШАГ {index + 1} ИЗ {draftSteps.length}</small><b>{draftSteps[index].title}</b>{draftSteps[index].options.map((option, optionIndex) => <button key={option} onClick={() => draft(optionIndex)}>{option}</button>)}</div></>}
+      {phase === "time" && <><h1>Расположи следы от менее распространяемого к более копируемому</h1><p>Точный срок неизвестен: он зависит от копий и действий других людей.</p><div className="timeline-built">{timeline.map((item, itemIndex) => <span key={item}>{itemIndex + 1}. {item}</span>)}</div><div className="timeline-options">{TRACE_ORDER.filter((item) => !timeline.includes(item)).sort().map((item) => <button key={item} onClick={() => addTime(item)}>{item}</button>)}</div></>}
+    </div>
+  );
+}
+
 function DistrictTwoComplete({ profile, onMap, onRepeat }) {
   const [showFlags, setShowFlags] = useState(false);
   const [showRepeat, setShowRepeat] = useState(false);
@@ -1287,7 +1569,25 @@ function DistrictTwoComplete({ profile, onMap, onRepeat }) {
         </div>
       )}
 
-      <div className="next-district-note"><span>🔒</span><div><b>Следующий район готовится к открытию</b><small>Миссии 9–24 пока заблокированы.</small></div></div>
+      <div className="next-district-note"><span>🗝️</span><div><b>Третий район открыт</b><small>Миссия 9 уже доступна на карте.</small></div></div>
+    </section>
+  );
+}
+
+function DistrictThreeComplete({ profile, onMap, onRepeat }) {
+  const [showFlags, setShowFlags] = useState(false);
+  const [showRepeat, setShowRepeat] = useState(false);
+  const districtMissions = MISSIONS.slice(8, 12);
+  return (
+    <section className="district-finale district-three-finale">
+      <div className="district-glow" aria-hidden="true">✦</div><div className="finale-shield" aria-hidden="true">🏰</div>
+      <span className="panel-eyebrow">Район восстановлен</span><h1>Третий район Кибергорода защищён!</h1>
+      <p><b>{profile.name}</b>, теперь ты умеешь усиливать защиту аккаунтов, безопасно пользоваться ИИ, сохранять важные файлы и управлять своим цифровым следом.</p>
+      <div className="finale-stats"><b>12</b><span>миссий выполнено</span><i>из 24</i></div>
+      <div className="finale-actions"><button className="button primary" onClick={onMap}>Вернуться на карту</button><button className="button secondary" onClick={() => setShowFlags((value) => !value)}>{showFlags ? "Скрыть мои флаги" : "Посмотреть мои флаги"}</button><button className="button secondary" onClick={() => setShowRepeat((value) => !value)}>Повторить любимую миссию</button></div>
+      {showRepeat && <div className="favorite-missions">{districtMissions.map((mission) => <button key={mission.id} onClick={() => onRepeat(mission.id)}><span>{mission.icon}</span><b>{mission.id}. {mission.title}</b></button>)}</div>}
+      {showFlags && <div className="district-flags">{districtMissions.map((mission) => <article key={mission.id} className={`district-flag ${mission.color}`}><span>{mission.icon}</span><div><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><code>{profile.flags[mission.id] || mission.flag}</code></div><button className="text-button" onClick={() => onRepeat(mission.id)}>Повторить</button></article>)}</div>}
+      <div className="next-district-note"><span>🔒</span><div><b>Следующий район готовится к открытию</b><small>Миссии 13–24 пока заблокированы.</small></div></div>
     </section>
   );
 }
@@ -1311,7 +1611,8 @@ function Reward({ mission, name, onMap, onNext, notify }) {
       <p className="flag-help">Запиши, скопируй или сфотографируй этот флаг. Он поможет продолжить приключение на другом устройстве.</p>
       {mission.id === 4 && <div className="district-complete"><b>Первый район Кибергорода защищён!</b><span>Новый маршрут открыт: переходи к миссии 5.</span></div>}
       {mission.id === 8 && <div className="district-complete"><b>Все четыре миссии второго района выполнены!</b><span>Забери флаг и посмотри, как изменился Кибергород.</span></div>}
-      <div className="reward-actions"><button className="button primary" onClick={copyFlag}>📋 Скопировать флаг</button><button className="button secondary" onClick={() => setLarge(!large)}>🔍 Показать флаг крупно</button><button className="button secondary" onClick={onNext}>{mission.id < 8 ? "Открыть следующую миссию →" : "Защитить второй район →"}</button><button className="text-button" onClick={onMap}>Вернуться на карту</button></div>
+      {mission.id === 12 && <div className="district-complete"><b>Все четыре миссии третьего района выполнены!</b><span>Забери флаг и восстанови новый район.</span></div>}
+      <div className="reward-actions"><button className="button primary" onClick={copyFlag}>📋 Скопировать флаг</button><button className="button secondary" onClick={() => setLarge(!large)}>🔍 Показать флаг крупно</button><button className="button secondary" onClick={onNext}>{mission.id === 8 ? "Защитить второй район →" : mission.id === 12 ? "Защитить третий район →" : "Открыть следующую миссию →"}</button><button className="text-button" onClick={onMap}>Вернуться на карту</button></div>
     </div>
   );
 }
