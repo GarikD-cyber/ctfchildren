@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const SAVE_PREFIX = "cybercity:v1:";
 const GENERAL_SETTINGS = "cybercity:v1:settings";
