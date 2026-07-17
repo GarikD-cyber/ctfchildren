@@ -566,7 +566,7 @@ function CityMap({ profile, onOpen, onHome }) {
           <div><b>миссий выполнено</b><div className="progress-track"><i style={{ width: `${(completed / 24) * 100}%` }} /></div></div>
         </div>
       </div>
-      <div className="district-label"><span>Район 01</span><b>Цифровая набережная</b><small>4 доступные миссии</small></div>
+      <div className="district-label"><span>Район 01</span><b>Цифровая набережная</b><small>4 игровые миссии</small></div>
       <div className="mission-path">
         {MISSIONS.map((mission, index) => {
           const done = profile.completed.includes(mission.id);
@@ -580,8 +580,8 @@ function CityMap({ profile, onOpen, onHome }) {
                 disabled={!available}
               >
                 <span className="node-number">{done ? "✓" : mission.id}</span>
-                <span className="node-icon">{mission.icon}</span>
-                <span className="node-copy"><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><em>{done ? "Выполнена" : started ? "Начата" : "Доступна"}</em></span>
+                <span className="node-icon">{available ? mission.icon : "🔒"}</span>
+                <span className="node-copy"><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><em>{done ? "Выполнена" : started ? "Начата" : available ? "Доступна" : "Заблокирована"}</em></span>
               </button>
               {index < 3 && <div className={`path-line ${done ? "lit" : ""}`}><i /><i /><i /></div>}
             </div>
