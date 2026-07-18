@@ -249,6 +249,38 @@ const MISSIONS = [
     check: { question: "В адресе cyberc1ty.example вместо cybercity.example что изменилось?", options: ["Ничего", "Буква i заменена цифрой 1", "Добавлен замок", "Удалено HTTPS"], correct: 1 },
     flag: "FLAG-АДРЕС-16", success: "Ты разоблачил сайты-двойники. Теперь жители Кибергорода будут проверять адрес страницы перед вводом данных.",
   },
+  {
+    id: 17, title: "Умный дом под контролем", district: "Район безопасных технологий", icon: "🏠", color: "cyan", villain: "Енот-Хакер",
+    story: "Камеры, колонки, игрушки и домашние роботы получили лишний доступ. Проверь настройки и верни управление жителям Кибергорода.",
+    lesson: "Умное устройство подключается к сети и может собирать информацию. Камера видит изображение, колонка слышит команды, а приложение иногда просит фотографии, местоположение или контакты. Разрешение — это согласие дать приложению доступ к функции или информации. Меняй стандартный пароль, устанавливай официальные обновления, отключай ненужные функции, проверяй источник приложения и удаляй старую учётную запись перед передачей устройства. Важные устройства и домашнюю сеть настраивай вместе со взрослым.",
+    rule: "Устройство должно получать только тот доступ, который нужен ему для работы.",
+    check: { question: "Приложение для умной лампы просит все фотографии и контакты. Что сделать?", options: ["Разрешить всё", "Не давать лишний доступ, проверить причину и показать запрос взрослому", "Отправить пароль от почты", "Отключить защиту телефона"], correct: 1 },
+    flag: "FLAG-УМНЫЙ-ДОМ-17", success: "Ты закрыл лишний доступ и безопасно настроил умные устройства. Теперь они помогают жителям, но не собирают лишнюю информацию.",
+  },
+  {
+    id: 18, title: "Файлы заблокированы", district: "Район безопасных технологий", icon: "🗃️", color: "orange", villain: "Блокировщик Архива",
+    story: "На экране городского архива появилось требование заплатить за файлы. Собери безопасный план реагирования и сохрани резервные копии.",
+    lesson: "Программа-вымогатель блокирует файлы или устройство и требует деньги. Ребёнок не должен платить или пытаться исправить всё самостоятельно: оплата не гарантирует возврат файлов. Остановись, ничего не нажимай, сразу сообщи взрослому, учителю или ответственному специалисту. Специалист может изолировать устройство, проверить сеть и восстановить данные. Резервную копию используют только после проверки и очистки устройства; неизвестные программы для расшифровки устанавливать нельзя.",
+    rule: "Не плати, не скрывай и не действуй самостоятельно — сразу сообщи взрослому.",
+    check: { question: "Компьютер требует оплатить разблокировку файлов. Что сделать первым?", options: ["Заплатить", "Ничего не оплачивать и сразу сообщить взрослому", "Нажать все кнопки", "Скрыть происшествие"], correct: 1 },
+    flag: "FLAG-НЕ-ПЛАТИ-18", success: "Ты не поддался на требование заплатить и правильно сообщил о проблеме. Благодаря резервным копиям архив можно восстановить безопасно.",
+  },
+  {
+    id: 19, title: "Голосовой двойник", district: "Район безопасных технологий", icon: "🎙️", color: "pink", villain: "Голосовой Двойник",
+    story: "Жителям приходят голосовые сообщения, похожие на голоса знакомых. В них требуют деньги, пароли и коды. Разоблачи двойника без микрофона.",
+    lesson: "ИИ может создать голос, похожий на голос другого человека. Похожий голос ещё не доказывает личность. Опасные признаки: срочность, секретность, просьба отправить деньги, пароль или код, необычный канал и эмоциональное давление. Не выполняй просьбу сразу: свяжись с человеком через известный номер или чат, задай личный, но не секретный вопрос и покажи сообщение взрослому.",
+    rule: "Услышал срочную просьбу — остановись и перепроверь человека другим способом.",
+    check: { question: "Голос друга просит: «Срочно пришли код. Никому не говори». Что делать?", options: ["Отправить код", "Не отправлять, проверить друга другим способом и показать взрослому", "Сохранить всё в секрете", "Перезвонить на номер из сообщения"], correct: 1 },
+    flag: "FLAG-ПЕРЕЗВОНИ-19", success: "Ты не поверил одному только голосу и проверил человека другим способом. Голос можно подделать, а безопасную проверку — нет.",
+  },
+  {
+    id: 20, title: "Безопасная загрузка", district: "Район безопасных технологий", icon: "📥", color: "violet", villain: "Даритель Ловушек",
+    story: "Магазин бесплатных игр обещает монеты и редкие предметы. Проверь источники, издателей и разрешения до загрузки.",
+    lesson: "Полезно выглядящий файл может содержать вредоносную программу. Безопаснее пользоваться официальным магазином, сайтом разработчика, настройками обновления и знакомым школьным или семейным сервисом. Бесплатная платная игра, бесконечные монеты, просьба отключить защиту, неизвестный издатель и лишние разрешения — признаки риска. Красивые отзывы и много скачиваний не гарантируют безопасность.",
+    rule: "Скачивай из проверенного источника и проверяй, какие разрешения просит приложение.",
+    check: { question: "Сайт обещает бесплатные монеты и просит отключить защиту. Что делать?", options: ["Скачать быстрее", "Не скачивать, закрыть страницу, сказать взрослому и открыть официальный источник", "Отключить защиту", "Переслать друзьям"], correct: 1 },
+    flag: "FLAG-ЗАГРУЗКА-20", success: "Ты выбрал проверенные источники и остановил опасные загрузки. Теперь приложения не смогут проникнуть в Кибергород под видом подарков.",
+  },
 ];
 
 const PROFILE_CARDS = [
@@ -565,7 +597,7 @@ function validName(value) {
 
 function newProfile(name, settings) {
   return {
-    version: 4,
+    version: 5,
     name: name.trim().replace(/\s+/g, " "),
     currentMission: 1,
     completed: [],
@@ -582,23 +614,23 @@ function newProfile(name, settings) {
 function migrateProfile(saved, fallbackName, settings) {
   if (!saved || typeof saved !== "object") return newProfile(fallbackName, settings);
   const completed = Array.from(new Set((Array.isArray(saved.completed) ? saved.completed : [])
-    .map(Number).filter((id) => id >= 1 && id <= 16))).sort((a, b) => a - b);
+    .map(Number).filter((id) => id >= 1 && id <= 20))).sort((a, b) => a - b);
   const contiguous = completed.reduce((last, id) => id === last + 1 ? id : last, 0);
-  const nextMission = Math.min(contiguous + 1, 16);
+  const nextMission = Math.min(contiguous + 1, 20);
   const available = Array.from(new Set([
     1,
-    ...(Array.isArray(saved.available) ? saved.available : []).map(Number).filter((id) => id >= 1 && id <= 16),
+    ...(Array.isArray(saved.available) ? saved.available : []).map(Number).filter((id) => id >= 1 && id <= 20),
     ...completed,
-    ...(contiguous < 16 ? [nextMission] : []),
+    ...(contiguous < 20 ? [nextMission] : []),
   ])).sort((a, b) => a - b);
   const flags = { ...(saved.flags && typeof saved.flags === "object" ? saved.flags : {}) };
   completed.forEach((id) => { if (!flags[id] && MISSIONS[id - 1]) flags[id] = MISSIONS[id - 1].flag; });
   return {
     ...newProfile(saved.name || fallbackName, settings),
     ...saved,
-    version: 4,
+    version: 5,
     name: String(saved.name || fallbackName).trim().replace(/\s+/g, " "),
-    currentMission: Math.min(Math.max(Number(saved.currentMission) || 1, 1), 16),
+    currentMission: Math.min(Math.max(Number(saved.currentMission) || 1, 1), 20),
     completed,
     available,
     flags,
@@ -710,7 +742,7 @@ export default function Home() {
   }
 
   function openMission(id) {
-    if (id > 16 || !profile.available.includes(id)) return;
+    if (id > 20 || !profile.available.includes(id)) return;
     updateProfile((p) => ({ ...p, currentMission: id }));
     setMissionId(id);
     setMissionStage(0);
@@ -807,6 +839,7 @@ export default function Home() {
               if (missionId === 8) setScreen("district2");
               else if (missionId === 12) setScreen("district3");
               else if (missionId === 16) setScreen("district4");
+              else if (missionId === 20) setScreen("district5");
               else openMission(missionId + 1);
             }}
             notify={setToast}
@@ -821,8 +854,11 @@ export default function Home() {
         {screen === "district4" && profile && (
           <DistrictFourComplete profile={profile} onMap={() => setScreen("map")} onRepeat={openMission} />
         )}
+        {screen === "district5" && profile && (
+          <DistrictFiveComplete profile={profile} onMap={() => setScreen("map")} onRepeat={openMission} />
+        )}
       </div>
-      <footer><span>🛡️ Данные остаются на этом устройстве</span><span>Расширенный прототип · 16 из 24 миссий</span></footer>
+      <footer><span>🛡️ Данные остаются на этом устройстве</span><span>Закрытая тестовая версия · 20 из 24 миссий</span></footer>
       {toast && <div className="toast" role="status">{toast}</div>}
     </main>
   );
@@ -977,6 +1013,7 @@ function CityMap({ profile, onOpen, onHome }) {
   const secondProtected = [5, 6, 7, 8].every((id) => profile.completed.includes(id));
   const thirdProtected = [9, 10, 11, 12].every((id) => profile.completed.includes(id));
   const fourthProtected = [13, 14, 15, 16].every((id) => profile.completed.includes(id));
+  const fifthProtected = [17, 18, 19, 20].every((id) => profile.completed.includes(id));
   return (
     <section className="map-screen">
       <div className="map-heading">
@@ -998,8 +1035,10 @@ function CityMap({ profile, onOpen, onHome }) {
       <MissionDistrict missions={MISSIONS.slice(8, 12)} profile={profile} onOpen={onOpen} restored={thirdProtected} />
       <div className={`district-label district-two-label ${fourthProtected ? "protected" : ""}`}><span>Район 04</span><b>Квартал цифровой бдительности</b><small>{fourthProtected ? "✓ Защищён и восстановлен" : "4 игровые миссии"}</small></div>
       <MissionDistrict missions={MISSIONS.slice(12, 16)} profile={profile} onOpen={onOpen} restored={fourthProtected} />
+      <div className={`district-label district-two-label ${fifthProtected ? "protected" : ""}`}><span>Район 05</span><b>Квартал безопасных технологий</b><small>{fifthProtected ? "✓ Защищён и восстановлен" : "4 игровые миссии"}</small></div>
+      <MissionDistrict missions={MISSIONS.slice(16, 20)} profile={profile} onOpen={onOpen} restored={fifthProtected} />
       <div className="future-districts">
-        {[5, 6].map((district) => (
+        {[6].map((district) => (
           <div className="future-district" key={district}>
             <div className="future-title"><span>🔒</span><b>Район {String(district).padStart(2, "0")}</b><small>Скоро откроется</small></div>
             <div className="future-nodes">
@@ -1060,13 +1099,13 @@ function Mission({ mission, stage, setStage, profile, updateProfile, onMap, onNe
   function completeMission() {
     updateProfile((p) => {
       const completedIds = Array.from(new Set([...p.completed, mission.id])).sort((a, b) => a - b);
-      const nextAvailable = mission.id < 16 ? [...p.available, mission.id + 1] : p.available;
+      const nextAvailable = mission.id < 20 ? [...p.available, mission.id + 1] : p.available;
       return {
         ...p,
         completed: completedIds,
         available: Array.from(new Set(nextAvailable)).sort((a, b) => a - b),
         flags: { ...p.flags, [mission.id]: mission.flag },
-        currentMission: Math.min(mission.id + 1, 16),
+        currentMission: Math.min(mission.id + 1, 20),
       };
     });
     setStage(4);
@@ -1135,6 +1174,10 @@ function Mission({ mission, stage, setStage, profile, updateProfile, onMap, onNe
       {stage === 3 && mission.id === 14 && <AiInvestigationGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 3 && mission.id === 15 && <DataTrafficGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 3 && mission.id === 16 && <SiteTwinGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 17 && <SmartHomeGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 18 && <RansomResponseGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 19 && <VoiceDoubleGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 20 && <SafeDownloadGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 4 && (
         <Reward mission={mission} name={profile.name} completed={completed} onMap={onMap} onNext={onNext} notify={notify} />
       )}
@@ -1694,6 +1737,110 @@ function SiteTwinGame({ profile, updateProfile, onSuccess, onLesson }) {
   </div>;
 }
 
+const SMART_DEVICES = [
+  { icon:"🔊", name:"Умная колонка", issue:"Стандартный пароль", action:"Изменить пароль и включить второй способ проверки", access:"Микрофон — только при команде; камера — нет; контакты — нет" },
+  { icon:"📷", name:"Домашняя камера", issue:"Публичный доступ к камере", action:"Закрыть публичный и гостевой доступ", access:"Камера — владельцу; микрофон — выключен; удалённое управление — владельцу" },
+  { icon:"🧸", name:"Умная игрушка", issue:"Ненужный микрофон постоянно включён", action:"Отключить ненужный микрофон", access:"Микрофон — выключен; фотографии и контакты — нет" },
+  { icon:"🤖", name:"Робот-пылесос", issue:"Отсутствует официальное обновление", action:"Установить официальное обновление", access:"Карта комнаты — владельцу; контакты и фотографии — нет" },
+  { icon:"💡", name:"Умная лампа", issue:"Доступ к фотографиям и контактам", action:"Ограничить лишние разрешения", access:"Управление лампой — да; фотографии и контакты — нет" },
+  { icon:"📺", name:"Телевизор", issue:"Старая учётная запись владельца", action:"Удалить старую учётную запись", access:"Просмотр — семья; старая учётная запись — удалена" },
+];
+
+function SmartHomeGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("find"),[index,setIndex]=useState(0),[safe,setSafe]=useState(0),[showError,setShowError]=useState(false);const device=SMART_DEVICES[index];
+  const fail=()=>{recordMistake(profile,updateProfile,17);setShowError(true)};
+  const issueOptions=[device.issue,"Разрешения настроены правильно","Нужно разрешить всё"];
+  const actionOptions=[device.action,"Отключить защиту","Открыть гостевой доступ для всех"];
+  function find(value){if(value!==device.issue){fail();return}setPhase("fix")}
+  function fix(value){if(value!==device.action){fail();return}setSafe(v=>v+1);setPhase("audit")}
+  function next(){if(index===SMART_DEVICES.length-1){onSuccess();return}setIndex(v=>v+1);setPhase("find")}
+  function retry(){setPhase("find");setIndex(0);setSafe(0);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[17]||0)>=2} hint="Проверь строку разрешений: доступ должен соответствовать назначению устройства. Лампе не нужны фотографии или контакты." onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  return <div className="mission-card game-card smart-home-game"><div className="game-counter"><span>{phase==="find"?"Часть 1 · Найди слабую настройку":phase==="fix"?"Часть 2 · Настрой устройство":"Часть 3 · Проверь доступ"}</span><b>Безопасно настроено устройств: {safe} из {SMART_DEVICES.length}</b></div>
+    <div className="device-console"><div className="device-hero"><span>{device.icon}</span><div><small>УСТРОЙСТВО {index+1} ИЗ {SMART_DEVICES.length}</small><h1>{device.name}</h1></div></div>
+      <div className="permission-strip"><span>Пароль</span><span>Обновление</span><span>Микрофон</span><span>Камера</span><span>Местоположение</span><span>Фотографии</span><span>Контакты</span><span>Удалённое управление</span><span>Гостевой доступ</span><span>Учётная запись</span></div>
+      {phase==="find"&&<><h2>Какая настройка ослабляет защиту?</h2><div className="console-actions">{issueOptions.map(value=><button key={value} onClick={()=>find(value)}>{value}</button>)}</div></>}
+      {phase==="fix"&&<><h2>Как исправить настройку?</h2><div className="console-actions">{actionOptions.map(value=><button key={value} onClick={()=>fix(value)}>{value}</button>)}</div></>}
+      {phase==="audit"&&<div className="access-audit"><b>✓ Доступ после настройки</b><p>{device.access}</p><small>Не вводи реальные пароли, адреса или данные. Важные настройки проверяет взрослый.</small><button className="button primary" onClick={next}>{index<SMART_DEVICES.length-1?"Следующее устройство →":"Завершить проверку дома"}</button></div>}
+    </div></div>;
+}
+
+const INCIDENT_ORDER=["Остановиться","Ничего не платить","Не нажимать подозрительные кнопки","Позвать взрослого","Сообщить специалисту или учителю","Сохранить фотографию сообщения, если это безопасно","Следовать указаниям специалиста","Проверить резервные копии","Восстанавливать данные только после очистки устройства"];
+const INCIDENT_TRAPS=["Заплатить самостоятельно","Написать злоумышленнику","Скрыть происшествие","Отправить заражённый файл другу","Установить случайную программу","Удалить всё без проверки"];
+const ADULT_ACTIONS=["Изолировать устройство","Проверить сеть","Не подключать резервный диск","Проверить другие устройства","Сохранить доказательства","Восстановить файлы после очистки"];
+const BACKUPS=[
+  ["Копия постоянно подключена к заражённому компьютеру","Не использовать"],["Проверенная отключённая копия","Рассмотреть после проверки"],["Неизвестная флешка","Не использовать"],["Семейное облако после проверки","Рассмотреть после проверки"],["Случайный файл из интернета","Не использовать"],["Копия, созданная до заражения","Рассмотреть после проверки"],
+];
+
+function RansomResponseGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("order"),[step,setStep]=useState(0),[selected,setSelected]=useState([]),[copy,setCopy]=useState(0),[showError,setShowError]=useState(false);
+  const fail=()=>{recordMistake(profile,updateProfile,18);setShowError(true)};
+  function pickOrder(value){if(value!==INCIDENT_ORDER[step]){fail();return}if(step===INCIDENT_ORDER.length-1)setPhase("contain");else setStep(v=>v+1)}
+  function toggle(value){setSelected(v=>v.includes(value)?v.filter(x=>x!==value):[...v,value])}
+  function checkContain(){if(selected.length!==ADULT_ACTIONS.length||!ADULT_ACTIONS.every(v=>selected.includes(v))){fail();return}setPhase("backup");setSelected([])}
+  function chooseCopy(value){if(value!==BACKUPS[copy][1]){fail();return}if(copy===BACKUPS.length-1){onSuccess();return}setCopy(v=>v+1)}
+  function retry(){setPhase("order");setStep(0);setSelected([]);setCopy(0);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[18]||0)>=2} hint="Сначала устройство проверяют и очищают. Только потом восстанавливают файлы. Технические действия выполняет взрослый или специалист." onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  return <div className="mission-card game-card incident-game"><div className="game-counter"><span>{phase==="order"?"Часть 1 · План действий":phase==="contain"?"Часть 2 · Останови распространение":"Часть 3 · Безопасная копия"}</span><b>{phase==="order"?`${step} из ${INCIDENT_ORDER.length} шагов`:phase==="backup"?`${copy+1} из ${BACKUPS.length}`:"Центр реагирования"}</b></div>
+    {phase==="order"&&<><div className="ransom-warning"><span>🔒</span><div><small>УЧЕБНОЕ СООБЩЕНИЕ</small><h1>Файлы заблокированы</h1><p>Ничего не оплачивай и не нажимай.</p></div></div><h2>Выбери следующий безопасный шаг</h2><div className="sequence-track">{INCIDENT_ORDER.slice(0,step).map((v,i)=><span key={v}>{i+1}. {v}</span>)}</div><div className="console-actions">{[...INCIDENT_ORDER.slice(step,step+2),...INCIDENT_TRAPS.slice(step%INCIDENT_TRAPS.length,step%INCIDENT_TRAPS.length+2)].map(v=><button key={v} onClick={()=>pickOrder(v)}>{v}</button>)}</div></>}
+    {phase==="contain"&&<><h1>Какие действия выполняет взрослый или специалист?</h1><div className="network-diagram"><span>💻 Заражённый компьютер</span><span>📶 Домашняя сеть</span><span>💾 Внешний диск</span><span>☁️ Облачная папка</span><span>📱 Другое устройство</span><span>🗄️ Резервная копия</span></div><div className="safe-action-grid">{[...ADULT_ACTIONS,"Ребёнок самостоятельно очищает компьютер","Подключить все диски"].map(v=><button key={v} className={selected.includes(v)?"selected":""} onClick={()=>toggle(v)}><small>{ADULT_ACTIONS.includes(v)?"Действие взрослого или специалиста":"Ловушка"}</small>{v}</button>)}</div><button className="button primary" onClick={checkContain}>Проверить план</button></>}
+    {phase==="backup"&&<><h1>Можно ли рассматривать эту копию?</h1><div className="backup-card">🗄️ <b>{BACKUPS[copy][0]}</b><small>Только после проверки специалистом</small></div><div className="console-actions"><button onClick={()=>chooseCopy("Рассмотреть после проверки")}>Рассмотреть после проверки</button><button onClick={()=>chooseCopy("Не использовать")}>Не использовать</button></div></>}
+  </div>;
+}
+
+const VOICE_MESSAGES=[
+  {from:"Друг Лис",text:"Срочно пришли код из сообщения. Никому не говори!",signs:["срочность","секретность","код"]},
+  {from:"Тётя Сова",text:"Прямо сейчас переведи деньги, потом объясню.",signs:["срочность","деньги"]},
+  {from:"Учитель Робот",text:"Завтра первый урок начнётся в девять. Информация есть в школьной системе.",signs:["нет подозрительных признаков"]},
+  {from:"Знакомый Кот",text:"Сохрани мою просьбу в секрете и пришли пароль.",signs:["секретность","пароль"]},
+  {from:"Папа Медведь",text:"Перезвони мне по нашему обычному номеру, когда освободишься.",signs:["нет подозрительных признаков"]},
+  {from:"Неизвестный",text:"Я голос игрового героя. Продолжим только в новом тайном чате.",signs:["необычный канал"]},
+  {from:"Двойник",text:"Если не ответишь прямо сейчас, случится беда! Никому не говори.",signs:["срочность","секретность"]},
+  {from:"Подруга Панда",text:"Спасибо за рисунок! Увидимся завтра в школе.",signs:["нет подозрительных признаков"]},
+];
+const VOICE_SIGNS=["срочность","секретность","деньги","пароль","код","необычный канал","нет подозрительных признаков"];
+const VERIFY_ACTIONS=["Перезвонить по сохранённому номеру","Написать в известном чате","Спросить взрослого","Задать личный, но не секретный вопрос","Проверить через другого знакомого"];
+const DIALOG_QUESTIONS=["О чём мы говорили сегодня в школе?","Как зовут нашего вымышленного робота?","Позвони мне по обычному номеру"];
+
+function VoiceDoubleGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("listen"),[index,setIndex]=useState(0),[selected,setSelected]=useState([]),[dialog,setDialog]=useState(0),[showError,setShowError]=useState(false);const message=VOICE_MESSAGES[index];
+  const fail=()=>{recordMistake(profile,updateProfile,19);setShowError(true)};const toggle=v=>setSelected(s=>s.includes(v)?s.filter(x=>x!==v):[...s,v]);
+  function checkSigns(){if(selected.length!==message.signs.length||!message.signs.every(v=>selected.includes(v))){fail();return}if(index===VOICE_MESSAGES.length-1){setPhase("verify");setSelected([])}else{setIndex(v=>v+1);setSelected([])}}
+  function checkVerify(){if(selected.length!==VERIFY_ACTIONS.length||!VERIFY_ACTIONS.every(v=>selected.includes(v))){fail();return}setPhase("dialog");setSelected([])}
+  function chooseQuestion(value){if(!DIALOG_QUESTIONS.includes(value)){fail();return}if(dialog===2){onSuccess();return}setDialog(v=>v+1)}
+  function retry(){setPhase("listen");setIndex(0);setSelected([]);setDialog(0);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[19]||0)>=2} hint="Ищи слова давления: «срочно», «никому не говори», «прямо сейчас». Никогда не проверяй личность просьбой назвать пароль или код." onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  return <div className="mission-card game-card voice-game"><div className="game-counter"><span>{phase==="listen"?"Часть 1 · Послушай сообщение":phase==="verify"?"Часть 2 · Выбери проверку":"Часть 3 · Проверочный диалог"}</span><b>{phase==="listen"?`${index+1} из ${VOICE_MESSAGES.length}`:"Без микрофона"}</b></div>
+    {phase==="listen"&&<><div className="voice-player"><button aria-label="Воспроизвести учебное сообщение">▶</button><div><small>ВЫМЫШЛЕННЫЙ ГОЛОС · СУБТИТРЫ</small><b>{message.from}</b><p>«{message.text}»</p></div><i/></div><h2>Отметь все признаки</h2><div className="sign-grid">{VOICE_SIGNS.map(v=><button key={v} className={selected.includes(v)?"selected":""} onClick={()=>toggle(v)}>{selected.includes(v)?"✓ ":""}{v}</button>)}</div><button className="button primary" onClick={checkSigns}>Проверить признаки</button></>}
+    {phase==="verify"&&<><h1>Выбери все безопасные способы проверки</h1><div className="safe-action-grid">{[...VERIFY_ACTIONS,"Отправить код","Выполнить просьбу сразу","Продолжить разговор с неизвестным"].map(v=><button key={v} className={selected.includes(v)?"selected":""} onClick={()=>toggle(v)}>{v}</button>)}</div><button className="button primary" onClick={checkVerify}>Проверить действия</button></>}
+    {phase==="dialog"&&<><h1>Выбери безопасный проверочный вопрос</h1><div className="dialog-bubble"><b>Двойник отвечает:</b><p>{dialog===0?"Не задавай вопросов, это срочно!":dialog===1?"Никому не говори, просто сделай прямо сейчас!":"Я не могу перезвонить, отправь код!"}</p></div><div className="console-actions">{[DIALOG_QUESTIONS[dialog],"Какой у тебя пароль?","Какой код пришёл на телефон?"].map(v=><button key={v} onClick={()=>chooseQuestion(v)}>{v}</button>)}</div></>}
+  </div>;
+}
+
+const DOWNLOAD_SOURCES=[
+  ["Официальный магазин приложений","Можно рассмотреть"],["Официальный сайт вымышленного разработчика","Можно рассмотреть"],["Обновление через настройки устройства","Можно рассмотреть"],["Ссылка от неизвестного пользователя","Не скачивать"],["Сайт с бесплатными монетами","Не скачивать"],["Файл в школьной системе","Сначала проверить"],["Найденная флешка","Не скачивать"],["Модифицированная игра","Не скачивать"],["Файл из общего чата","Сначала проверить"],["Семейный каталог приложений","Можно рассмотреть"],["Страница с подменённой буквой","Не скачивать"],["Письмо с вложением от неизвестного","Не скачивать"],
+];
+const APP_PERMISSIONS=[
+  ["Фонарик","Микрофон","Лишнее"],["Игра","Все сообщения","Лишнее"],["Карта","Местоположение во время работы","Необходимое"],["Видеочат","Камера и микрофон во время звонка","Необходимое"],["Калькулятор","Контакты","Лишнее"],["Редактор фотографий","Выбранная фотография","Необходимое"],["Умная лампа","Телефонная книга","Лишнее"],
+];
+const INSTALL_CASES=[
+  ["Звёздная карта","Официальный магазин","Камера не нужна","Установить"],["Монеты навсегда","Неизвестная страница","Отключите защиту","Отказаться"],["Школьный атлас","Школьная система","Издатель требует проверки","Проверить вместе со взрослым"],["Фото-Мастер","Официальный магазин","Доступ ко всем контактам","Ограничить разрешения"],["Робо-Гонки MOD","Общий чат","Неизвестный издатель","Отказаться"],["Свет дома","Страница с похожим адресом","Подменённая буква","Найти официальный источник"],["Калькулятор Плюс","Семейный каталог","Без лишних разрешений","Установить"],["Срочный подарок","Письмо незнакомца","Скачать только сегодня","Отказаться"],
+];
+
+function SafeDownloadGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("source"),[index,setIndex]=useState(0),[showError,setShowError]=useState(false);const item=phase==="source"?DOWNLOAD_SOURCES[index]:phase==="permissions"?APP_PERMISSIONS[index]:INSTALL_CASES[index];
+  const fail=()=>{recordMistake(profile,updateProfile,20);setShowError(true)};
+  function answer(value){const expected=phase==="source"?item[1]:phase==="permissions"?item[2]:item[3];if(value!==expected){fail();return}const list=phase==="source"?DOWNLOAD_SOURCES:phase==="permissions"?APP_PERMISSIONS:INSTALL_CASES;if(index<list.length-1){setIndex(v=>v+1);return}if(phase==="source"){setPhase("permissions");setIndex(0)}else if(phase==="permissions"){setPhase("install");setIndex(0)}else onSuccess()}
+  function retry(){setPhase("source");setIndex(0);setShowError(false)}
+  const hint=phase==="source"?"Подсвечена строка «Источник»: официальный путь снижает риск, а неизвестный файл или подменённый адрес — повод отказаться.":phase==="permissions"?"Подсвечена строка «Разрешения»: сравни запрос с назначением приложения.":"Проверь строки «Источник», «Издатель» и «Разрешения».";
+  if(showError)return <GameError showHint={(profile.attempts[20]||0)>=2} hint={hint} onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  return <div className="mission-card game-card download-game"><div className="game-counter"><span>{phase==="source"?"Часть 1 · Выбери источник":phase==="permissions"?"Часть 2 · Проверь разрешения":"Часть 3 · Установить или отказаться"}</span><b>{index+1} из {phase==="source"?DOWNLOAD_SOURCES.length:phase==="permissions"?APP_PERMISSIONS.length:INSTALL_CASES.length}</b></div>
+    {phase==="source"&&<><div className="download-card"><span>📦</span><small>ИСТОЧНИК</small><h1>{item[0]}</h1><p>Красивые отзывы и число загрузок не доказывают безопасность.</p></div><div className="console-actions">{["Можно рассмотреть","Сначала проверить","Не скачивать"].map(v=><button key={v} onClick={()=>answer(v)}>{v}</button>)}</div></>}
+    {phase==="permissions"&&<><div className="permission-app"><span>📱</span><div><small>ПРИЛОЖЕНИЕ</small><h1>{item[0]}</h1><p><b>Разрешения:</b> {item[1]}</p></div></div><div className="console-actions">{["Необходимое","Сомнительное","Лишнее"].map(v=><button key={v} onClick={()=>answer(v)}>{v}</button>)}</div></>}
+    {phase==="install"&&<><div className="install-sheet"><span>🎮</span><h1>{item[0]}</h1><dl><div><dt>Вымышленный издатель</dt><dd>Студия «Киберискра»</dd></div><div><dt>Источник</dt><dd>{item[1]}</dd></div><div><dt>Разрешения / предупреждение</dt><dd>{item[2]}</dd></div><div><dt>Дата обновления</dt><dd>Учебная дата</dd></div><div><dt>Отзывы</dt><dd>Отзывы сами по себе не гарантия</dd></div></dl></div><div className="console-actions five-actions">{["Установить","Проверить вместе со взрослым","Отказаться","Найти официальный источник","Ограничить разрешения"].map(v=><button key={v} onClick={()=>answer(v)}>{v}</button>)}</div></>}
+  </div>;
+}
+
 function DistrictTwoComplete({ profile, onMap, onRepeat }) {
   const [showFlags, setShowFlags] = useState(false);
   const [showRepeat, setShowRepeat] = useState(false);
@@ -1758,7 +1905,18 @@ function DistrictFourComplete({ profile, onMap, onRepeat }) {
     <div className="finale-actions"><button className="button primary" onClick={onMap}>Вернуться на карту</button><button className="button secondary" onClick={()=>setShowFlags(v=>!v)}>{showFlags?"Скрыть мои флаги":"Посмотреть мои флаги"}</button><button className="button secondary" onClick={()=>setShowRepeat(v=>!v)}>Повторить любимую миссию</button></div>
     {showRepeat&&<div className="favorite-missions">{districtMissions.map(mission=><button key={mission.id} onClick={()=>onRepeat(mission.id)}><span>{mission.icon}</span><b>{mission.id}. {mission.title}</b></button>)}</div>}
     {showFlags&&<div className="district-flags">{districtMissions.map(mission=><article key={mission.id} className={`district-flag ${mission.color}`}><span>{mission.icon}</span><div><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><code>{profile.flags[mission.id]||mission.flag}</code></div><button className="text-button" onClick={()=>onRepeat(mission.id)}>Повторить</button></article>)}</div>}
-    <div className="next-district-note"><span>🔒</span><div><b>Следующий район готовится к открытию</b><small>Миссии 17–24 пока заблокированы.</small></div></div>
+    <div className="next-district-note"><span>🏠</span><div><b>Пятый район открыт</b><small>Миссия 17 уже доступна на карте.</small></div></div>
+  </section>;
+}
+
+function DistrictFiveComplete({ profile, onMap, onRepeat }) {
+  const [showFlags,setShowFlags]=useState(false),[showRepeat,setShowRepeat]=useState(false);const districtMissions=MISSIONS.slice(16,20);
+  return <section className="district-finale district-five-finale"><div className="district-glow" aria-hidden="true">✦</div><div className="finale-shield" aria-hidden="true">🏙️</div><span className="panel-eyebrow">Район восстановлен</span><h1>Пятый район Кибергорода защищён!</h1>
+    <p><b>{profile.name}</b>, теперь ты умеешь безопасно настраивать умные устройства, правильно действовать при блокировке файлов, проверять голосовые сообщения и выбирать безопасные загрузки.</p><div className="finale-stats"><b>20</b><span>миссий выполнено</span><i>из 24</i></div>
+    <div className="finale-actions"><button className="button primary" onClick={onMap}>Вернуться на карту</button><button className="button secondary" onClick={()=>setShowFlags(v=>!v)}>{showFlags?"Скрыть мои флаги":"Посмотреть мои флаги"}</button><button className="button secondary" onClick={()=>setShowRepeat(v=>!v)}>Повторить любимую миссию</button></div>
+    {showRepeat&&<div className="favorite-missions">{districtMissions.map(mission=><button key={mission.id} onClick={()=>onRepeat(mission.id)}><span>{mission.icon}</span><b>{mission.id}. {mission.title}</b></button>)}</div>}
+    {showFlags&&<div className="district-flags">{districtMissions.map(mission=><article key={mission.id} className={`district-flag ${mission.color}`}><span>{mission.icon}</span><div><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><code>{profile.flags[mission.id]||mission.flag}</code></div><button className="text-button" onClick={()=>onRepeat(mission.id)}>Повторить</button></article>)}</div>}
+    <div className="next-district-note"><span>🔒</span><div><b>Следующий район готовится к открытию</b><small>Миссии 21–24: «Скоро откроется».</small></div></div>
   </section>;
 }
 
@@ -1783,7 +1941,8 @@ function Reward({ mission, name, onMap, onNext, notify }) {
       {mission.id === 8 && <div className="district-complete"><b>Все четыре миссии второго района выполнены!</b><span>Забери флаг и посмотри, как изменился Кибергород.</span></div>}
       {mission.id === 12 && <div className="district-complete"><b>Все четыре миссии третьего района выполнены!</b><span>Забери флаг и восстанови новый район.</span></div>}
       {mission.id === 16 && <div className="district-complete"><b>Все четыре миссии четвёртого района выполнены!</b><span>Забери флаг и восстанови район.</span></div>}
-      <div className="reward-actions"><button className="button primary" onClick={copyFlag}>📋 Скопировать флаг</button><button className="button secondary" onClick={() => setLarge(!large)}>🔍 Показать флаг крупно</button><button className="button secondary" onClick={onNext}>{mission.id === 8 ? "Защитить второй район →" : mission.id === 12 ? "Защитить третий район →" : mission.id === 16 ? "Защитить четвёртый район →" : "Открыть следующую миссию →"}</button><button className="text-button" onClick={onMap}>Вернуться на карту</button></div>
+      {mission.id === 20 && <div className="district-complete"><b>Все четыре миссии пятого района выполнены!</b><span>Забери флаг и восстанови район.</span></div>}
+      <div className="reward-actions"><button className="button primary" onClick={copyFlag}>📋 Скопировать флаг</button><button className="button secondary" onClick={() => setLarge(!large)}>🔍 Показать флаг крупно</button><button className="button secondary" onClick={onNext}>{mission.id === 8 ? "Защитить второй район →" : mission.id === 12 ? "Защитить третий район →" : mission.id === 16 ? "Защитить четвёртый район →" : mission.id === 20 ? "Защитить пятый район →" : "Открыть следующую миссию →"}</button><button className="text-button" onClick={onMap}>Вернуться на карту</button></div>
     </div>
   );
 }
