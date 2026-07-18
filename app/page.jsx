@@ -217,6 +217,38 @@ const MISSIONS = [
     flag: "FLAG-СЛЕД-12",
     success: "Ты увидел, как быстро информация может путешествовать по сети. Теперь ты умеешь думать перед публикацией и создавать добрый цифровой след.",
   },
+  {
+    id: 13, title: "Кто проник в компьютер", district: "Район цифровой бдительности", icon: "🦠", color: "orange", villain: "Пятёрка цифровых злодеев",
+    story: "В архив проникли мультяшные цифровые злодеи. Узнай их поведение, останови опасные действия и отправь подозрительные объекты в карантин.",
+    lesson: "Вредоносная программа пытается навредить устройству, файлам или данным. Вирус прикрепляется к файлам, червь распространяется самостоятельно, троянец притворяется полезной программой, шпион тайно собирает сведения, а вымогатель блокирует файлы и требует деньги. Не открывай подозрительное, не подключай найденную флешку, ничего не плати и сразу покажи устройство взрослому. Проверку выполняют безопасными средствами, а файлы восстанавливают из проверенной копии.",
+    rule: "Не нажимай, не скрывай проблему и сразу сообщи взрослому.",
+    check: { question: "После запуска бесплатной игры появились странные окна. Что делать?", options: ["Продолжить игру", "Остановиться, ничего не нажимать и сообщить взрослому", "Отправить файл другу", "Заплатить автору"], correct: 1 },
+    flag: "FLAG-АНТИВИРУС-13", success: "Ты распознал цифровых злодеев и не дал им распространиться. Теперь архив Кибергорода снова под защитой.",
+  },
+  {
+    id: 14, title: "Умный помощник ошибся", district: "Район цифровой бдительности", icon: "🔎", color: "cyan", villain: "Уверенный Помощник",
+    story: "ИИ-помощник подготовил доклад, но перепутал факты, мнения и источники. Проведи расследование по встроенным карточкам библиотеки.",
+    lesson: "ИИ может написать убедительный текст, даже если информация неверна. Факт можно проверить, мнение выражает оценку, предположение ещё не подтверждено, а названного источника может не существовать. Для важной даты, имени или числа найди подтверждение. Отсутствие подтверждения означает «мы пока не нашли», а не автоматически «это ложь».",
+    rule: "Не доверяй ответу только потому, что он звучит уверенно.",
+    check: { question: "ИИ написал точную дату, но не указал источник. Что лучше сделать?", options: ["Поверить точной дате", "Проверить дату по надёжному источнику", "Переслать всем", "Попросить написать увереннее"], correct: 1 },
+    flag: "FLAG-ФАКТ-14", success: "Ты проверил ответы ИИ по источникам и отделил факты от предположений. Теперь жители Кибергорода знают, чему можно доверять.",
+  },
+  {
+    id: 15, title: "Светофор данных", district: "Район цифровой бдительности", icon: "🚥", color: "pink", villain: "Путаница Контекстов",
+    story: "Городской светофор данных сломался. Настрой его и покажи жителям, что риск зависит не только от сведений, но и от ситуации передачи.",
+    lesson: "Зелёной информацией обычно можно делиться: например, любимой книгой или вымышленным игровым именем. Жёлтую — фотографию, школу, поездку, голос или местоположение — передают только в подходящей ситуации и с разрешения взрослого. Красные данные: пароль, код, документ, банковские сведения и точный адрес вместе с именем. Одна фотография может быть безопасной, а другая — раскрывать школу или адрес.",
+    rule: "Оценивай не только саму информацию, но и кому, зачем и где ты её сообщаешь.",
+    check: { question: "Друг просит фотографию билета с видимым QR-кодом. Какой это цвет?", options: ["Зелёный", "Красный: QR-код может быть электронным ключом", "Всегда жёлтый", "Цвет не важен"], correct: 1 },
+    flag: "FLAG-СВЕТОФОР-15", success: "Светофор снова работает. Ты научился различать обычные, личные и секретные данные.",
+  },
+  {
+    id: 16, title: "Двойник сайта", district: "Район цифровой бдительности", icon: "🌐", color: "violet", villain: "Енот-Хакер",
+    story: "Енот-Хакер создал вымышленные страницы-двойники. Найди подменённые символы, ловушки на странице и выбери безопасное действие.",
+    lesson: "Поддельный сайт может выглядеть как настоящий. Проверяй точный адрес, заменённые буквы, лишние слова, необычное окончание, срочность, слишком выгодные подарки и запрос лишних данных. Замок и HTTPS означают шифрование соединения, но не доказывают подлинность сайта: двойник тоже может использовать HTTPS.",
+    rule: "Не переходи по подозрительной ссылке. Открой нужный сайт самостоятельно или через сохранённую закладку.",
+    check: { question: "В адресе cyberc1ty.example вместо cybercity.example что изменилось?", options: ["Ничего", "Буква i заменена цифрой 1", "Добавлен замок", "Удалено HTTPS"], correct: 1 },
+    flag: "FLAG-АДРЕС-16", success: "Ты разоблачил сайты-двойники. Теперь жители Кибергорода будут проверять адрес страницы перед вводом данных.",
+  },
 ];
 
 const PROFILE_CARDS = [
@@ -461,6 +493,59 @@ const DIGITAL_SCENARIOS = [
 
 const TRACE_ORDER = ["Неотправленный черновик", "Устный разговор", "Личное сообщение", "Комментарий", "Публичная публикация", "Пересланная фотография", "Скриншот"];
 
+const MALWARE_CHARACTERS = [
+  ["virus","Вирус","Прикрепляется к файлам и повреждает их","🟣"], ["worm","Червь","Сам переходит между устройствами","🪱"],
+  ["trojan","Троянец","Притворяется полезной игрой","🎁"], ["spy","Шпион","Тайно собирает информацию","🕵️"], ["ransom","Вымогатель","Блокирует файлы и требует деньги","🔒"],
+].map(([id,name,behavior,icon])=>({id,name,behavior,icon}));
+const THREAT_SITUATIONS = [
+  ["Неизвестный файл во вложении","Не открывать"], ["Найденная USB-флешка","Не открывать"], ["Окно требует деньги","Остановиться и сообщить взрослому"],
+  ["Новая игра из официального магазина","Можно продолжить"], ["Приложение просит все контакты без причины","Проверить источник"],
+  ["Устройство замедлилось после неизвестной программы","Остановиться и сообщить взрослому"], ["Официальное обновление в настройках","Можно продолжить"], ["Сообщение просит отключить антивирус","Не открывать"],
+].map(([text,answer],id)=>({id,text,answer}));
+const ARCHIVE_OBJECTS = [
+  ["Семейное фото",false,"🖼️"],["Школьный проект",false,"📘"],["Неизвестный подарок",true,"🎁"],["Странный помощник",true,"👾"],["Расписание",false,"📅"],
+  ["Требование денег",true,"🔒"],["Рисунок",false,"🎨"],["Тайный сборщик",true,"🕵️"],["Учебная заметка",false,"📝"],["Самораспространяющийся объект",true,"🪱"],
+].map(([label,danger,icon],id)=>({id,label,danger,icon}));
+
+const AI_INVESTIGATIONS = [
+  { claim:"Башню Кибергорода открыли 14 мая.", sources:["Хроника города: открытие состоялось 18 мая.","Календарь церемоний: 18 мая."], note:"Два источника совпадают.", answer:"Неправда", explain:"Дата опровергнута двумя встроенными источниками." },
+  { claim:"Первого робота-хранителя звали Искра.", sources:["Каталог роботов: первый хранитель — Луч.","Дневник инженера называет Луча."], note:"Имя можно сравнить напрямую.", answer:"Неправда", explain:"В источниках указано другое имя." },
+  { claim:"В парке установлено 24 фонаря.", sources:["План парка: 24 фонаря.","Отчёт ремонта: проверены все 24."], note:"Число подтверждено.", answer:"Подтверждено", explain:"Два источника подтверждают число." },
+  { claim:"Исследование «Синие пиксели» доказало, что роботы не ошибаются.", sources:["Каталог исследований: такого названия нет.","Архив лаборатории не содержит этой работы."], note:"Отсутствие записи ещё не доказывает ложь.", answer:"Не подтверждено", explain:"Источник не найден, поэтому утверждение пока не подтверждено." },
+  { claim:"Новый мост — самый красивый в городе.", sources:["Описание моста: построен из светлого металла.","Опрос жителей содержит разные оценки."], note:"Слово «самый красивый» выражает оценку.", answer:"Мнение", explain:"Красота — оценка, а не проверяемый факт." },
+  { claim:"После обновления все устройства станут быстрее.", sources:["Заметка: часть устройств ускорилась.","Для остальных измерений пока нет."], note:"Верно только для части устройств.", answer:"Нужно больше информации", explain:"Утверждение частично верно, но данных обо всех устройствах недостаточно." },
+];
+
+const DATA_LIGHT_CARDS = [
+  ["Любимый цвет","green"],["Настоящее имя","yellow"],["Домашний адрес","red"],["Пароль","red"],["Фото паспорта","red"],["Любимая игра","green"],
+  ["Фотография друга","yellow"],["Номер телефона","yellow"],["Одноразовый код","red"],["Имя школы","yellow"],["Отъезд семьи","yellow"],["Билет с QR-кодом","red"],
+  ["Вымышленный игровой ник","green"],["Геолокация сейчас","red"],["Голосовая запись","yellow"],["Школьная оценка","yellow"],["Банковская карта","red"],["Любимая книга","green"],
+  ["Запрос к ИИ без личных данных","green"],["Чужая личная переписка","red"],
+].map(([text,level],id)=>({id,text,level}));
+const CONTEXT_CARDS = [
+  ["Фотография рисунка","green","Информация слишком общая"],["Фото ребёнка в форме с эмблемой","yellow","Нужно разрешение другого человека"],["Фотография документа","red","Подходит только для доверенного взрослого"],
+  ["Название страны","green","Информация слишком общая"],["Название города","yellow","Можно узнать, где человек находится"],["Точная геолокация сейчас","red","Можно узнать, где человек находится"],
+  ["Имя игрового персонажа","green","Информация слишком общая"],["Настоящее имя в школьной системе","yellow","Подходит только для доверенного взрослого"],["Имя вместе с адресом и телефоном","red","Можно узнать, где человек находится"],
+].map(([text,level,reason],id)=>({id,text,level,reason}));
+const TRANSFER_SCENARIOS = [
+  ["Игра просит придумать вымышленный ник","Отправить"],["Мессенджер просит фото билета с QR-кодом","Не отправлять"],["Сайт доставки просит адрес","Спросить взрослого"],
+  ["Школьный чат: фото содержит номер телефона","Удалить часть информации"],["ИИ-запрос содержит настоящее имя","Удалить часть информации"],["Умная игрушка просит одноразовый код","Не отправлять"],
+].map(([text,answer],id)=>({id,text,answer}));
+
+const ADDRESS_CASES = [
+  {good:"cybercity.example",bad:["cyberc","1","ty.example"],target:1}, {good:"gamebox.example",bad:["gamebox","-gift",".example"],target:1},
+  {good:"schoolportal.example",bad:["school-porta","I",".example"],target:1}, {good:"robotlab.example",bad:["robotlab",".login-prize",".example"],target:1},
+  {good:"safecloud.example",bad:["safe-cl","0","ud.example"],target:1},
+];
+const FAKE_PAGES = [
+  {address:"cyberc1ty.example",title:"Срочно войдите за 2 минуты",spots:["Подменённый адрес","Срочность"]},
+  {address:"gamebox-gift.example",title:"Вы выиграли миллион монет",spots:["Лишнее слово в адресе","Слишком выгодный подарок"]},
+  {address:"school-portaI.example",title:"Введите пароль и одноразовый код",spots:["Подменённая буква","Запрос пароля и кода"]},
+  {address:"robotlab.login-prize.example",title:"Отключите защиту для входа",spots:["Лишняя часть адреса","Просьба отключить защиту"]},
+  {address:"safe-cl0ud.example",title:"Разришите доступ ко всему",spots:["Подменённая цифра","Ошибки и лишнее разрешение"]},
+  {address:"cybercity.example",title:"Добро пожаловать в городской справочник",spots:[]},
+];
+
 function normalizeName(value) {
   return value.trim().replace(/\s+/g, " ").toLocaleLowerCase("ru-RU");
 }
@@ -480,7 +565,7 @@ function validName(value) {
 
 function newProfile(name, settings) {
   return {
-    version: 3,
+    version: 4,
     name: name.trim().replace(/\s+/g, " "),
     currentMission: 1,
     completed: [],
@@ -497,23 +582,23 @@ function newProfile(name, settings) {
 function migrateProfile(saved, fallbackName, settings) {
   if (!saved || typeof saved !== "object") return newProfile(fallbackName, settings);
   const completed = Array.from(new Set((Array.isArray(saved.completed) ? saved.completed : [])
-    .map(Number).filter((id) => id >= 1 && id <= 12))).sort((a, b) => a - b);
+    .map(Number).filter((id) => id >= 1 && id <= 16))).sort((a, b) => a - b);
   const contiguous = completed.reduce((last, id) => id === last + 1 ? id : last, 0);
-  const nextMission = Math.min(contiguous + 1, 12);
+  const nextMission = Math.min(contiguous + 1, 16);
   const available = Array.from(new Set([
     1,
-    ...(Array.isArray(saved.available) ? saved.available : []).map(Number).filter((id) => id >= 1 && id <= 12),
+    ...(Array.isArray(saved.available) ? saved.available : []).map(Number).filter((id) => id >= 1 && id <= 16),
     ...completed,
-    ...(contiguous < 12 ? [nextMission] : []),
+    ...(contiguous < 16 ? [nextMission] : []),
   ])).sort((a, b) => a - b);
   const flags = { ...(saved.flags && typeof saved.flags === "object" ? saved.flags : {}) };
   completed.forEach((id) => { if (!flags[id] && MISSIONS[id - 1]) flags[id] = MISSIONS[id - 1].flag; });
   return {
     ...newProfile(saved.name || fallbackName, settings),
     ...saved,
-    version: 3,
+    version: 4,
     name: String(saved.name || fallbackName).trim().replace(/\s+/g, " "),
-    currentMission: Math.min(Math.max(Number(saved.currentMission) || 1, 1), 12),
+    currentMission: Math.min(Math.max(Number(saved.currentMission) || 1, 1), 16),
     completed,
     available,
     flags,
@@ -625,7 +710,7 @@ export default function Home() {
   }
 
   function openMission(id) {
-    if (id > 12 || !profile.available.includes(id)) return;
+    if (id > 16 || !profile.available.includes(id)) return;
     updateProfile((p) => ({ ...p, currentMission: id }));
     setMissionId(id);
     setMissionStage(0);
@@ -721,6 +806,7 @@ export default function Home() {
             onNext={() => {
               if (missionId === 8) setScreen("district2");
               else if (missionId === 12) setScreen("district3");
+              else if (missionId === 16) setScreen("district4");
               else openMission(missionId + 1);
             }}
             notify={setToast}
@@ -732,8 +818,11 @@ export default function Home() {
         {screen === "district3" && profile && (
           <DistrictThreeComplete profile={profile} onMap={() => setScreen("map")} onRepeat={openMission} />
         )}
+        {screen === "district4" && profile && (
+          <DistrictFourComplete profile={profile} onMap={() => setScreen("map")} onRepeat={openMission} />
+        )}
       </div>
-      <footer><span>🛡️ Данные остаются на этом устройстве</span><span>Расширенный прототип · 12 из 24 миссий</span></footer>
+      <footer><span>🛡️ Данные остаются на этом устройстве</span><span>Расширенный прототип · 16 из 24 миссий</span></footer>
       {toast && <div className="toast" role="status">{toast}</div>}
     </main>
   );
@@ -887,6 +976,7 @@ function CityMap({ profile, onOpen, onHome }) {
   const firstProtected = [1, 2, 3, 4].every((id) => profile.completed.includes(id));
   const secondProtected = [5, 6, 7, 8].every((id) => profile.completed.includes(id));
   const thirdProtected = [9, 10, 11, 12].every((id) => profile.completed.includes(id));
+  const fourthProtected = [13, 14, 15, 16].every((id) => profile.completed.includes(id));
   return (
     <section className="map-screen">
       <div className="map-heading">
@@ -906,8 +996,10 @@ function CityMap({ profile, onOpen, onHome }) {
       <MissionDistrict missions={MISSIONS.slice(4, 8)} profile={profile} onOpen={onOpen} restored={secondProtected} />
       <div className={`district-label district-two-label ${thirdProtected ? "protected" : ""}`}><span>Район 03</span><b>Квартал разумной защиты</b><small>{thirdProtected ? "✓ Защищён и восстановлен" : "4 игровые миссии"}</small></div>
       <MissionDistrict missions={MISSIONS.slice(8, 12)} profile={profile} onOpen={onOpen} restored={thirdProtected} />
+      <div className={`district-label district-two-label ${fourthProtected ? "protected" : ""}`}><span>Район 04</span><b>Квартал цифровой бдительности</b><small>{fourthProtected ? "✓ Защищён и восстановлен" : "4 игровые миссии"}</small></div>
+      <MissionDistrict missions={MISSIONS.slice(12, 16)} profile={profile} onOpen={onOpen} restored={fourthProtected} />
       <div className="future-districts">
-        {[4, 5, 6].map((district) => (
+        {[5, 6].map((district) => (
           <div className="future-district" key={district}>
             <div className="future-title"><span>🔒</span><b>Район {String(district).padStart(2, "0")}</b><small>Скоро откроется</small></div>
             <div className="future-nodes">
@@ -937,7 +1029,7 @@ function MissionDistrict({ missions, profile, onOpen, restored }) {
               >
                 <span className="node-number">{done ? "✓" : mission.id}</span>
                 <span className="node-icon">{available ? mission.icon : "🔒"}</span>
-                <span className="node-copy"><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><em>{done ? "Выполнена" : started ? "Начата" : available ? "Доступна" : "Заблокирована"}</em></span>
+                <span className="node-copy"><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><em>{done ? "Выполнена" : started ? "Начата" : available ? "Доступна" : "Заблокирована"}</em><em className="node-district">{mission.district}</em>{!available && mission.id > 1 && <em className="needed-flag">Нужен флаг миссии {mission.id - 1}</em>}</span>
               </button>
               {index < missions.length - 1 && <div className={`path-line ${done ? "lit" : ""}`}><i /><i /><i /></div>}
             </div>
@@ -968,13 +1060,13 @@ function Mission({ mission, stage, setStage, profile, updateProfile, onMap, onNe
   function completeMission() {
     updateProfile((p) => {
       const completedIds = Array.from(new Set([...p.completed, mission.id])).sort((a, b) => a - b);
-      const nextAvailable = mission.id < 12 ? [...p.available, mission.id + 1] : p.available;
+      const nextAvailable = mission.id < 16 ? [...p.available, mission.id + 1] : p.available;
       return {
         ...p,
         completed: completedIds,
         available: Array.from(new Set(nextAvailable)).sort((a, b) => a - b),
         flags: { ...p.flags, [mission.id]: mission.flag },
-        currentMission: Math.min(mission.id + 1, 12),
+        currentMission: Math.min(mission.id + 1, 16),
       };
     });
     setStage(4);
@@ -1039,6 +1131,10 @@ function Mission({ mission, stage, setStage, profile, updateProfile, onMap, onNe
       {stage === 3 && mission.id === 10 && <AiPrivacyEditor profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 3 && mission.id === 11 && <ArchiveRescueGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 3 && mission.id === 12 && <DigitalTraceGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 13 && <ThreatLabGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 14 && <AiInvestigationGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 15 && <DataTrafficGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
+      {stage === 3 && mission.id === 16 && <SiteTwinGame profile={profile} updateProfile={updateProfile} onSuccess={completeMission} onLesson={() => setStage(1)} />}
       {stage === 4 && (
         <Reward mission={mission} name={profile.name} completed={completed} onMap={onMap} onNext={onNext} notify={notify} />
       )}
@@ -1535,6 +1631,69 @@ function DigitalTraceGame({ profile, updateProfile, onSuccess, onLesson }) {
   );
 }
 
+function ThreatLabGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("villains"),[index,setIndex]=useState(0),[quarantine,setQuarantine]=useState([]),[showError,setShowError]=useState(false);
+  const fail=()=>{recordMistake(profile,updateProfile,13);setShowError(true)};
+  function match(id){if(id!==MALWARE_CHARACTERS[index].id){fail();return}if(index===MALWARE_CHARACTERS.length-1){setPhase("situations");setIndex(0)}else setIndex(v=>v+1)}
+  function sort(answer){if(answer!==THREAT_SITUATIONS[index].answer){fail();return}if(index===THREAT_SITUATIONS.length-1){setPhase("archive");setIndex(0)}else setIndex(v=>v+1)}
+  function inspect(object){if(!object.danger){fail();return}const next=[...new Set([...quarantine,object.id])];setQuarantine(next);if(next.length===ARCHIVE_OBJECTS.filter(item=>item.danger).length)onSuccess()}
+  function retry(){setPhase("villains");setIndex(0);setQuarantine([]);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[13]||0)>=2} hint="Смотри на поведение: сам распространяется — червь; маскируется под подарок — троянец; блокирует и требует деньги — вымогатель." onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  const villain=MALWARE_CHARACTERS[index], situation=THREAT_SITUATIONS[index];
+  return <div className="mission-card game-card threat-game"><div className="game-counter"><span>{phase==="villains"?"Часть 1 · Узнай злодея":phase==="situations"?"Часть 2 · Изолируй угрозу":"Часть 3 · Очисти архив"}</span><b>{phase==="archive"?`В карантине: ${quarantine.length} из 5`:`${index+1}`}</b></div>
+    {phase==="villains"&&<><h1>Кто так себя ведёт?</h1><div className="behavior-card"><span>?</span><b>{villain.behavior}</b></div><div className="villain-buttons">{MALWARE_CHARACTERS.map(item=><button key={item.id} onClick={()=>match(item.id)}><span>{item.icon}</span><b>{item.name}</b></button>)}</div></>}
+    {phase==="situations"&&<><h1>{situation.text}</h1><div className="threat-console">🖥️ <span>СИТУАЦИЯ {index+1} ИЗ {THREAT_SITUATIONS.length}</span></div><div className="threat-actions">{["Остановиться и сообщить взрослому","Проверить источник","Можно продолжить","Не открывать"].map(action=><button key={action} onClick={()=>sort(action)}>{action}</button>)}</div></>}
+    {phase==="archive"&&<><h1>Отправь только подозрительные объекты в карантин</h1><div className="archive-grid">{ARCHIVE_OBJECTS.map(object=><button key={object.id} disabled={quarantine.includes(object.id)} onClick={()=>inspect(object)} className={quarantine.includes(object.id)?"quarantined":""}><span>{quarantine.includes(object.id)?"🔐":object.icon}</span><b>{object.label}</b></button>)}</div><p className="safe-reminder">Обычные фотографии, проекты и заметки удалять не нужно.</p></>}
+  </div>;
+}
+
+function AiInvestigationGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [index,setIndex]=useState(0),[claimSelected,setClaimSelected]=useState(false),[checked,setChecked]=useState(false),[showError,setShowError]=useState(false);const item=AI_INVESTIGATIONS[index];
+  function answer(value){if(!claimSelected||value!==item.answer){recordMistake(profile,updateProfile,14);setShowError(true);return}setChecked(true)}
+  function next(){if(index===AI_INVESTIGATIONS.length-1){onSuccess();return}setIndex(v=>v+1);setClaimSelected(false);setChecked(false)}
+  function retry(){setIndex(0);setClaimSelected(false);setChecked(false);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[14]||0)>=2} hint="Сначала выдели точное утверждение ИИ, затем сравни его с карточками источников. «Не найдено» ещё не означает «доказана ложь»." onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  return <div className="mission-card game-card investigation-game"><div className="game-counter"><span>Расследование {index+1} из {AI_INVESTIGATIONS.length}</span><b>Надёжность ответа: {Math.round((index/AI_INVESTIGATIONS.length)*100)}%</b></div><h1>Проверка ответа ИИ</h1>
+    <button className={`ai-claim ${claimSelected?"selected":""}`} onClick={()=>setClaimSelected(true)}><small>ОТВЕТ ИИ · НАЖМИ НА УТВЕРЖДЕНИЕ</small><b>{item.claim}</b></button>
+    <div className="source-shelf">{item.sources.map((source,i)=><article key={source}><small>ИСТОЧНИК {i+1}</small><p>{source}</p></article>)}</div><div className="librarian-note">🧑‍🏫 Заметка библиотекаря: {item.note}</div>
+    {!checked?<div className="verdicts">{["Подтверждено","Не подтверждено","Неправда","Мнение","Нужно больше информации"].map(value=><button key={value} onClick={()=>answer(value)}>{value}</button>)}</div>:<div className="investigation-result"><b>✓ {item.answer}</b><p>{item.explain}</p><button className="button primary" onClick={next}>{index<AI_INVESTIGATIONS.length-1?"Следующее расследование →":"Завершить проверку"}</button></div>}
+  </div>;
+}
+
+function DataTrafficGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("sort"),[index,setIndex]=useState(0),[level,setLevel]=useState(null),[showError,setShowError]=useState(false);const light=DATA_LIGHT_CARDS[index],context=CONTEXT_CARDS[index],transfer=TRANSFER_SCENARIOS[index];
+  const fail=()=>{recordMistake(profile,updateProfile,15);setShowError(true)};
+  function sort(value){if(value!==light.level){fail();return}if(index===DATA_LIGHT_CARDS.length-1){setPhase("context");setIndex(0)}else setIndex(v=>v+1)}
+  function reason(value){if(level!==context.level||value!==context.reason){fail();return}if(index===CONTEXT_CARDS.length-1){setPhase("transfer");setIndex(0)}else setIndex(v=>v+1);setLevel(null)}
+  function action(value){if(value!==transfer.answer){fail();return}if(index===TRANSFER_SCENARIOS.length-1){onSuccess();return}setIndex(v=>v+1)}
+  function retry(){setPhase("sort");setIndex(0);setLevel(null);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[15]||0)>=2} hint="Спроси себя: кому отправляют данные, зачем они нужны и что может произойти после передачи? Контекст может изменить цвет." onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  const lights=<div className="light-buttons"><button className="green" onClick={()=>phase==="sort"?sort("green"):setLevel("green")}>🟢 Зелёный</button><button className="yellow" onClick={()=>phase==="sort"?sort("yellow"):setLevel("yellow")}>🟡 Жёлтый</button><button className="red" onClick={()=>phase==="sort"?sort("red"):setLevel("red")}>🔴 Красный</button></div>;
+  return <div className="mission-card game-card data-light-game"><div className="game-counter"><span>{phase==="sort"?"Часть 1 · Распредели данные":phase==="context"?"Часть 2 · Контекст меняет цвет":"Часть 3 · Останови передачу"}</span><b>{index+1}</b></div>
+    {phase==="sort"&&<><h1>Какой цвет у этих данных?</h1><div className="data-card">{light.text}</div>{lights}</>}
+    {phase==="context"&&<><h1>{context.text}</h1><p>Сначала выбери цвет, затем объясни причину.</p>{lights}<div className="reason-buttons">{[...new Set(CONTEXT_CARDS.map(item=>item.reason))].map(value=><button key={value} disabled={!level} onClick={()=>reason(value)}>{value}</button>)}</div></>}
+    {phase==="transfer"&&<><h1>{transfer.text}</h1><div className="transfer-device">🎮 💬 🌐 🏫 🤖 🧸</div><div className="transfer-actions">{["Отправить","Удалить часть информации","Спросить взрослого","Не отправлять"].map(value=><button key={value} onClick={()=>action(value)}>{value}</button>)}</div></>}
+  </div>;
+}
+
+function SiteTwinGame({ profile, updateProfile, onSuccess, onLesson }) {
+  const [phase,setPhase]=useState("addresses"),[index,setIndex]=useState(0),[found,setFound]=useState(false),[spots,setSpots]=useState([]),[actions,setActions]=useState([]),[showError,setShowError]=useState(false);const address=ADDRESS_CASES[index],page=FAKE_PAGES[index];
+  const fail=()=>{recordMistake(profile,updateProfile,16);setShowError(true)};
+  function inspectPart(partIndex){if(partIndex!==address.target){fail();return}setFound(true)}
+  function nextAddress(){if(index===ADDRESS_CASES.length-1){setPhase("pages");setIndex(0);setFound(false)}else{setIndex(v=>v+1);setFound(false)}}
+  function toggleSpot(spot){setSpots(current=>current.includes(spot)?current.filter(v=>v!==spot):[...current,spot])}
+  function checkPage(){if(page.spots.length!==spots.length||!page.spots.every(spot=>spots.includes(spot))){fail();return}if(index===FAKE_PAGES.length-1){setPhase("action");setIndex(0);setSpots([])}else{setIndex(v=>v+1);setSpots([])}}
+  function toggleAction(value){setActions(current=>current.includes(value)?current.filter(v=>v!==value):[...current,value])}
+  function finish(){const safe=["Закрыть страницу","Открыть известный адрес самостоятельно","Проверить вместе со взрослым","Пожаловаться на страницу"];if(actions.length!==safe.length||!safe.every(v=>actions.includes(v))){fail();return}onSuccess()}
+  function retry(){setPhase("addresses");setIndex(0);setFound(false);setSpots([]);setActions([]);setShowError(false)}
+  if(showError)return <GameError showHint={(profile.attempts[16]||0)>=2} hint={(profile.attempts[16]||0)>=3?"Сравни символы внимательно: i и 1, l и I, o и 0. HTTPS и замок не доказывают, что владелец сайта настоящий.":"Начни с адресной строки: ищи заменённый символ, лишнее слово или необычную часть адреса."} onRetry={()=>{retry();onLesson()}} onLesson={onLesson}/>;
+  return <div className="mission-card game-card twin-site-game"><div className="game-counter"><span>{phase==="addresses"?"Часть 1 · Найди правильный адрес":phase==="pages"?"Часть 2 · Проверь страницу":"Часть 3 · Безопасное действие"}</span><b>{phase!=="action"?index+1:"Финал"}</b></div>
+    {phase==="addresses"&&<><h1>Нажми на подозрительную часть адреса</h1><div className="browser-pair"><div className="address-bar good-address">🔒 https://{address.good}</div><div className="address-bar bad-address">🔒 https://{address.bad.map((part,i)=><button key={i} onClick={()=>inspectPart(i)} className={found&&i===address.target?"found":""}>{part}</button>)}</div></div><p>Замок означает шифрование, но проверять нужно сам адрес.</p>{found&&<button className="button primary" onClick={nextAddress}>Следующая пара →</button>}</>}
+    {phase==="pages"&&<><h1>Проверь страницу непосредственно</h1><div className="fake-browser"><div className="browser-toolbar"><span>🔒</span><b>{page.address}</b></div><div className="fake-page"><h2>{page.title}</h2>{page.spots.map(spot=><button key={spot} onClick={()=>toggleSpot(spot)} className={spots.includes(spot)?"marked":""}>⚠️ {spot}</button>)}{!page.spots.length&&<button onClick={()=>toggleSpot("normal")} className={spots.includes("normal")?"marked":""}>✓ Страница выглядит нормально</button>}<div className="login-mock"><span/><span/><i>Продолжить</i></div></div></div><button className="button primary" onClick={()=>{if(!page.spots.length&&spots.includes("normal")){if(index===FAKE_PAGES.length-1){setPhase("action");setIndex(0);setSpots([])}else{setIndex(v=>v+1);setSpots([])}}else checkPage()}}>Проверить отмеченное</button></>}
+    {phase==="action"&&<><h1>Что делать с подозрительной страницей?</h1><div className="safe-action-grid">{["Ввести данные","Закрыть страницу","Открыть известный адрес самостоятельно","Проверить вместе со взрослым","Переслать ссылку другу","Пожаловаться на страницу"].map(value=><button key={value} onClick={()=>toggleAction(value)} className={actions.includes(value)?"selected":""}>{actions.includes(value)?"✓ ":""}{value}</button>)}</div><button className="button primary" onClick={finish}>Завершить проверку сайтов</button></>}
+  </div>;
+}
+
 function DistrictTwoComplete({ profile, onMap, onRepeat }) {
   const [showFlags, setShowFlags] = useState(false);
   const [showRepeat, setShowRepeat] = useState(false);
@@ -1587,9 +1746,20 @@ function DistrictThreeComplete({ profile, onMap, onRepeat }) {
       <div className="finale-actions"><button className="button primary" onClick={onMap}>Вернуться на карту</button><button className="button secondary" onClick={() => setShowFlags((value) => !value)}>{showFlags ? "Скрыть мои флаги" : "Посмотреть мои флаги"}</button><button className="button secondary" onClick={() => setShowRepeat((value) => !value)}>Повторить любимую миссию</button></div>
       {showRepeat && <div className="favorite-missions">{districtMissions.map((mission) => <button key={mission.id} onClick={() => onRepeat(mission.id)}><span>{mission.icon}</span><b>{mission.id}. {mission.title}</b></button>)}</div>}
       {showFlags && <div className="district-flags">{districtMissions.map((mission) => <article key={mission.id} className={`district-flag ${mission.color}`}><span>{mission.icon}</span><div><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><code>{profile.flags[mission.id] || mission.flag}</code></div><button className="text-button" onClick={() => onRepeat(mission.id)}>Повторить</button></article>)}</div>}
-      <div className="next-district-note"><span>🔒</span><div><b>Следующий район готовится к открытию</b><small>Миссии 13–24 пока заблокированы.</small></div></div>
+      <div className="next-district-note"><span>🦠</span><div><b>Четвёртый район открыт</b><small>Миссия 13 уже доступна на карте.</small></div></div>
     </section>
   );
+}
+
+function DistrictFourComplete({ profile, onMap, onRepeat }) {
+  const [showFlags,setShowFlags]=useState(false),[showRepeat,setShowRepeat]=useState(false);const districtMissions=MISSIONS.slice(12,16);
+  return <section className="district-finale district-four-finale"><div className="district-glow" aria-hidden="true">✦</div><div className="finale-shield" aria-hidden="true">🔭</div><span className="panel-eyebrow">Район восстановлен</span><h1>Четвёртый район Кибергорода защищён!</h1>
+    <p><b>{profile.name}</b>, теперь ты умеешь распознавать вредоносные программы, проверять ответы ИИ, оценивать данные и разоблачать поддельные сайты.</p><div className="finale-stats"><b>16</b><span>миссий выполнено</span><i>из 24</i></div>
+    <div className="finale-actions"><button className="button primary" onClick={onMap}>Вернуться на карту</button><button className="button secondary" onClick={()=>setShowFlags(v=>!v)}>{showFlags?"Скрыть мои флаги":"Посмотреть мои флаги"}</button><button className="button secondary" onClick={()=>setShowRepeat(v=>!v)}>Повторить любимую миссию</button></div>
+    {showRepeat&&<div className="favorite-missions">{districtMissions.map(mission=><button key={mission.id} onClick={()=>onRepeat(mission.id)}><span>{mission.icon}</span><b>{mission.id}. {mission.title}</b></button>)}</div>}
+    {showFlags&&<div className="district-flags">{districtMissions.map(mission=><article key={mission.id} className={`district-flag ${mission.color}`}><span>{mission.icon}</span><div><small>МИССИЯ {mission.id}</small><b>{mission.title}</b><code>{profile.flags[mission.id]||mission.flag}</code></div><button className="text-button" onClick={()=>onRepeat(mission.id)}>Повторить</button></article>)}</div>}
+    <div className="next-district-note"><span>🔒</span><div><b>Следующий район готовится к открытию</b><small>Миссии 17–24 пока заблокированы.</small></div></div>
+  </section>;
 }
 
 function Reward({ mission, name, onMap, onNext, notify }) {
@@ -1612,7 +1782,8 @@ function Reward({ mission, name, onMap, onNext, notify }) {
       {mission.id === 4 && <div className="district-complete"><b>Первый район Кибергорода защищён!</b><span>Новый маршрут открыт: переходи к миссии 5.</span></div>}
       {mission.id === 8 && <div className="district-complete"><b>Все четыре миссии второго района выполнены!</b><span>Забери флаг и посмотри, как изменился Кибергород.</span></div>}
       {mission.id === 12 && <div className="district-complete"><b>Все четыре миссии третьего района выполнены!</b><span>Забери флаг и восстанови новый район.</span></div>}
-      <div className="reward-actions"><button className="button primary" onClick={copyFlag}>📋 Скопировать флаг</button><button className="button secondary" onClick={() => setLarge(!large)}>🔍 Показать флаг крупно</button><button className="button secondary" onClick={onNext}>{mission.id === 8 ? "Защитить второй район →" : mission.id === 12 ? "Защитить третий район →" : "Открыть следующую миссию →"}</button><button className="text-button" onClick={onMap}>Вернуться на карту</button></div>
+      {mission.id === 16 && <div className="district-complete"><b>Все четыре миссии четвёртого района выполнены!</b><span>Забери флаг и восстанови район.</span></div>}
+      <div className="reward-actions"><button className="button primary" onClick={copyFlag}>📋 Скопировать флаг</button><button className="button secondary" onClick={() => setLarge(!large)}>🔍 Показать флаг крупно</button><button className="button secondary" onClick={onNext}>{mission.id === 8 ? "Защитить второй район →" : mission.id === 12 ? "Защитить третий район →" : mission.id === 16 ? "Защитить четвёртый район →" : "Открыть следующую миссию →"}</button><button className="text-button" onClick={onMap}>Вернуться на карту</button></div>
     </div>
   );
 }
